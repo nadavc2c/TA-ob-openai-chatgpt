@@ -1,7 +1,7 @@
 # TA-ob-openai-chatgpt
 A Splunk add-on for OpenAI integration.
 
-Note: Guides and explanations are under construction, but you can start exploring this add-on now.
+Note: Guides and explanations are under construction, and this is still an early version, but you can start exploring this add-on now.
 
 ![logo2.png](static%2Flogo2.png)
 
