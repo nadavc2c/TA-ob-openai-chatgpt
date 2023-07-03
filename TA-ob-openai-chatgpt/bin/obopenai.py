@@ -34,6 +34,7 @@ class ObopenaiCommand(StreamingCommand):
     # available modes: dlp,
     mode = Option()
     prompt = Option(require=True)
+    conversation = Option()
     model = Option()
     temperature = Option()
     maxrows = Option()
@@ -48,11 +49,14 @@ class ObopenaiCommand(StreamingCommand):
     def _set_chat_role(self):
         with open('modes.json', 'r') as file:
             modes = json.load(file)
-        if self.mode and not self.system_role:  # use empty string for general assistant
+        if self.mode:  # use empty string for general assistant
+            if self.system_role:
+                raise ValueError("You can only choose one of 'mode' or 'system_role', not both.")
             try:
                 chat_system_role = modes[self.mode]
             except KeyError:
-                chat_system_role = "you are an Indian cook that knows only how to cook and nothing else. you will not " \
+                chat_system_role = "you are an Indian cook that knows only how to cook and" \
+                                   " nothing else. you will not " \
                                    "answer anything that is not related to cooking. act as an Indian cook."
         elif self.system_role:
             chat_system_role = self.system_role
@@ -96,7 +100,7 @@ class ObopenaiCommand(StreamingCommand):
 
         # From arguments
         model = self.model or "gpt-3.5-turbo"
-        # maxrows is per batch of 50,000. set to 10 to not violate licence by mistake. 0 to limitless.
+        # maxrows is per batch of 50,000. set to 10 to not violate license by mistake. 0 to limitless.
         maxrows = self.maxrows or 5  # walrus only in 3.8
         maxrows = None if maxrows == 0 else maxrows
         maxtokens = self.maxtokens
@@ -110,8 +114,8 @@ class ObopenaiCommand(StreamingCommand):
             if self.mode == 'conv':
                 messages = json.loads(self.mode)
             else:
-                messages = [{'role': 'system', 'content': system_role},
-                            {'role': 'user', 'content': event[self.prompt]}]
+                messages = [{'role': 'system', 'content': system_role}]
+            messages.append({'role': 'user', 'content': event[self.prompt]})
             response = openai.ChatCompletion.create(
                 model=model,
                 messages=messages,
@@ -119,10 +123,10 @@ class ObopenaiCommand(StreamingCommand):
                 user=user,
                 organization=organization,
                 max_tokens=maxtokens)
-            event.update({'gpt_response': response})
+            self.add_field(event, 'gpt_response', response)
             if self.mode == 'conv':
                 messages.append(response['choices'][0]['message'])
-                event.update({self.prompt: messages})
+                self.add_field(event, self.prompt, messages)
             sleep(sleep_time) if sleep_time else None
             yield event
 

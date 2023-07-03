@@ -3,7 +3,7 @@ A Splunk add-on for OpenAI integration.
 
 Note: Guides and explanations are under construction, but you can start exploring this add-on now.
 
-![logo2.png](static%2Flogo2.png)
+![logo2.png](static/logo2.png)
 
 Obopenai is an add-on developed by Outbrain™️ to address some requirements that were not satisfied by the existing add-ons in Splunkbase.
 
