@@ -43,16 +43,9 @@ Pending for approval in Splunkbase.
 
 Please refer to `TA-ob-openai-chatgpt/default/searchbnf.conf` for options and syntax.
 
-```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
-```
+Add your new modes to `bin\modes.json`
+
+Guides with screenshots and videos will be released soon.
 
 ## Bugs and feature requests
 
@@ -70,7 +63,7 @@ Please read through our [contributing guidelines](https://www.azquotes.com/quote
 
 ## Thanks
 
-You should thank Outbrain™️ that have graced this add-on upon you.
+You should thank Outbrain™️ that graced this add-on upon you.
 
 ## Copyright and license
 
