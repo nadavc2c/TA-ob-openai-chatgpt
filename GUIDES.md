@@ -2,18 +2,13 @@
   <a href="https://github.com/nadavc2c/TA-ob-openai-chatgpt">
     <img src="https://raw.githubusercontent.com/nadavc2c/TA-ob-openai-chatgpt/main/static/logo2.png" alt="Logo" width=72 height=72>
   </a>
-
-  <h3 align="center">OB OpenAI</h3>
-
-  <div style="text-align: center;">
-    Enrich your logs with the power of AI
-    <br>
-    <a href="https://quotefancy.com/quote/1439790/Fran-Tarkenton-If-it-s-not-fun-you-are-not-doing-it-right">Report bug</a>
-    ·
-    <a href="https://github.com/nadavc2c/TA-ob-openai-chatgpt/issues">Request feature</a>
-  </div>
+  <h3>OB OpenAI</h3>
+Enrich your logs with the power of AI
+<br>
+<a href="https://quotefancy.com/quote/1439790/Fran-Tarkenton-If-it-s-not-fun-you-are-not-doing-it-right">Report bug</a>
+·
+<a href="https://github.com/nadavc2c/TA-ob-openai-chatgpt/issues">Request feature</a>
 </div>
-
 
 ## Table of contents
 
@@ -25,7 +20,6 @@
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
-
 
 ## Quick start
 
