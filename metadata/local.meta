@@ -1,0 +1,13 @@
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-ob-openai-chatgpt%23configs%2Fconf-ta_ob_openai_chatgpt_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 9.0.5
+modtime = 1688482633.158116100
+
+[passwords/credential%3A__REST_CREDENTIAL__%23TA-ob-openai-chatgpt%23configs%2Fconf-ta_ob_openai_chatgpt_settings%3Aadditional_parameters%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 9.0.5
+modtime = 1688482633.191126000
+
+[ta_ob_openai_chatgpt_settings/additional_parameters]
+version = 9.0.5
+modtime = 1688482633.218635400
