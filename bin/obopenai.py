@@ -110,11 +110,11 @@ class ObopenaiCommand(StreamingCommand):
         model = self.model or "gpt-3.5-turbo"
         # maxrows is per batch of 50,000. set to 10 to not violate license by mistake. 0 to limitless.
         maxrows = self.maxrows or 5  # walrus only in 3.8
-        maxrows = None if maxrows == 0 else maxrows
-        maxtokens = self.maxtokens
-        temperature = self.temperature
+        maxrows = None if int(maxrows) == 0 else int(maxrows)
+        maxtokens = int(self.maxtokens) if self.maxtokens else None
+        temperature = int(self.temperature) if self.temperature else None
         system_role = self._set_chat_role()
-        sleep_time = self.sleep_time if self.sleep_time else 0
+        sleep_time = int(self.sleep_time) if self.sleep_time else 0
         user = self.setuser or self.service.confs[custom_conf_file]["additional_parameters"]['default_user']
         organization = self.service.confs[custom_conf_file]["additional_parameters"]['organization_id']
 
@@ -123,8 +123,9 @@ class ObopenaiCommand(StreamingCommand):
             if self.mode == 'conv':
                 messages.append(json.loads(event[self.conversation]))
             elif system_role:
-                messages.append([{'role': 'system', 'content': system_role}])
-            messages.append({'role': 'user', 'content': event[self.prompt]})
+                messages.append({"role": "system", "content": system_role})
+            messages.append({"role": "user", "content": event[self.prompt]})
+            print(type(event[self.prompt]))
             response = openai.ChatCompletion.create(
                 model=model,
                 messages=messages,
