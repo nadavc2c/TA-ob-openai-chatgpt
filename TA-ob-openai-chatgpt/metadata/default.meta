@@ -44,3 +44,6 @@ export = system
 
 [searchbnf]
 export = system
+
+[collections/TA_ob_openai_chatgpt_system_modes]
+access = read : [ * ], write : [ admin ]
