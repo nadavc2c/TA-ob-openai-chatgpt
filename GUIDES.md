@@ -37,7 +37,7 @@ Pending for approval in Splunkbase.
 
 Please refer to `TA-ob-openai-chatgpt/default/searchbnf.conf` for options and syntax.
 
-Add your new modes to `bin\modes.json`
+Add your new modes to `bin\modes.json` or to the KV Store `TA_ob_openai_chatgpt_system_modes`.
 
 Guides with screenshots and videos will be released soon.
 
