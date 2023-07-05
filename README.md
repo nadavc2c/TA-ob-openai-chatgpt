@@ -3,7 +3,7 @@ A Splunk add-on for OpenAI integration.
 
 Note: V1.0.1 is out!\
 You can start exploring this add-on now.\
-***Please download the app from Splunkbase when it's ready, or from the Releases tab on the right.\
+***Please download the app from Splunkbase when it's ready, or from the Releases tab on the right. The source code is not yet cleaned up.\
 The `builder` branch is the add-on builder version, and has the latest bugfixes.***
 
 ![logo2.png](static/logo2.png)
