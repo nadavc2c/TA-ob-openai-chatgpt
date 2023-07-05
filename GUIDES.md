@@ -34,7 +34,7 @@ Hello there! This add-on is graced upon you by Outbrain™️, the leading Nativ
 
 Pending for approval in Splunkbase.\
 If needed, please `chmod -R 644 .` to set the correct permissions after extracting the package.\
-Default permissions are [restrictive](TA-ob-openai-chatgpt/metadata/default.meta) (admin role only), but you can change it to allow other users to use this add-on.
+Default permissions are [restrictive](https://github.com/nadavc2c/TA-ob-openai-chatgpt/blob/bc76c6320bff7cf140bd8b87cd4811589d883d29/TA-ob-openai-chatgpt/metadata/default.meta) (admin role only), but you can change it to allow other users to use this add-on.
 
 ## What's included
 
