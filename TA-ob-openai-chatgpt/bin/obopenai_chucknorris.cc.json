@@ -1,0 +1,81 @@
+{
+    "meta": {
+        "apiVersion": "1.0.0"
+    },
+    "tokens": [
+        "__settings__.logging.loglevel",
+        "__settings__.proxy.proxy_enabled",
+        "__settings__.proxy.proxy_url",
+        "__settings__.proxy.proxy_port",
+        "__settings__.proxy.proxy_type",
+        "__settings__.proxy.proxy_username",
+        "__settings__.proxy.proxy_rdns",
+        "__settings__.proxy.proxy_password",
+        "__settings__.additional_parameters.api_key",
+        "__settings__.additional_parameters.organization_id",
+        "__settings__.additional_parameters.default_user",
+        "__settings__.additional_parameters.api_base"
+    ],
+    "global_settings": {
+        "proxy": {
+            "enabled": "{{__settings__.proxy.proxy_enabled}}",
+            "host": "{{__settings__.proxy.proxy_url}}",
+            "port": "{{__settings__.proxy.proxy_port}}",
+            "username": "{{__settings__.proxy.proxy_username}}",
+            "password": "{{__settings__.proxy.proxy_password}}",
+            "rdns": "{{__settings__.proxy.proxy_rdns}}",
+            "type": "{{__settings__.proxy.proxy_type}}"
+        },
+        "logging": {
+            "level": "{{__settings__.logging.loglevel}}"
+        }
+    },
+    "requests": [
+        {
+            "pre_process": {
+                "skip_conditions": [],
+                "pipeline": []
+            },
+            "request": {
+                "url": "https://api.chucknorris.io/jokes/random",
+                "method": "GET",
+                "headers": {}
+            },
+            "post_process": {
+                "skip_conditions": [
+                    {
+                        "input": [
+                            "{{__response__.body}}",
+                            "$"
+                        ],
+                        "method": "json_empty"
+                    }
+                ],
+                "pipeline": [
+                    {
+                        "input": [
+                            "{{__response__.body}}",
+                            "",
+                            "{{index}}",
+                            "{{host}}",
+                            "{{source}}",
+                            "{{sourcetype}}"
+                        ],
+                        "method": "splunk_xml",
+                        "output": "__stdout__"
+                    },
+                    {
+                        "input": [
+                            "{{__stdout__}}"
+                        ],
+                        "method": "std_output"
+                    }
+                ]
+            },
+            "iteration_mode": {
+                "iteration_count": "1",
+                "stop_conditions": []
+            }
+        }
+    ]
+}
