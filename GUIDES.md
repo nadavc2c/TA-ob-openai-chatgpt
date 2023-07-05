@@ -28,6 +28,7 @@ Hello there! This add-on is graced upon you by Outbrain™️, the leading Nativ
 - Create a field with some prompt
 - Pipe to to `| obopenai prompt=field_name`
 - Extract the response with `| spath input=gpt_response output=response_content path="choices{0}.message.content"`
+- [Quickstart tutorial](https://youtu.be/8TQTXkoHObk)
 
 ## Status
 
