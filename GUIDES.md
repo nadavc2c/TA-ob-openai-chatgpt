@@ -34,7 +34,7 @@ Hello there! This add-on is graced upon you by Outbrain™️, the leading Nativ
 
 Pending for approval in Splunkbase.\
 If needed, please `chmod -R 644 .` to set the correct permissions after extracting the package.\
-Default permissions are restrictive, but you can change it to allow other users to use this add-on.\
+Default permissions are restrictive, but you can change it to allow other users to use this add-on.
 
 ## What's included
 
