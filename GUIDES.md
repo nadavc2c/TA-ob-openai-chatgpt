@@ -31,7 +31,8 @@ Hello there! This add-on is graced upon you by Outbrain™️, the leading Nativ
 
 ## Status
 
-Pending for approval in Splunkbase.
+Pending for approval in Splunkbase.\
+If needed, please `chmod -R 644 .` to set the correct permissions after extracting the package.
 
 ## What's included
 
