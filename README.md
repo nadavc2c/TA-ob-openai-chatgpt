@@ -20,6 +20,7 @@ The main differences are:
 5. Compatible with Add-On Builder.
 6. And more.
 
-Notice: This is a public version of the app, so things might work differently for you. If you have any requests or run into any problems, or if you want to contribute, feel free to do so on GitHub.
+Notice: This is a public version of the app, so things might work differently for you. If you have any requests or run into any problems, or if you want to contribute, feel free to do so on GitHub.\
+Disclaimers: AI is not a magic solution, and may produce inaccurate information.
 
 We hope you find this add-on useful.
