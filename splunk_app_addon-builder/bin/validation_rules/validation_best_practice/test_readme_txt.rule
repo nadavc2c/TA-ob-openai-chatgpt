@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Create a README.txt file for the add-on.",
+  "description": "The top directory of the add-on should contain a readme.txt file.",
+  "case_name": "test_readme_txt",
+  "id": "best_practice_validator.readme_txt",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "README.txt file",
+  "validation_results" : {
+    "8046": {
+        "description": "There is no README.txt file in the top directory of the add-on.",
+        "solution": "Create a readme.txt file for the add-on.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8047": {
+        "description": "The add-on has a README.txt file.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

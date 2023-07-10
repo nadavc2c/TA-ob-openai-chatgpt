@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Use colon (:) instead.",
+  "description": "Sourcetype names should not contain underscores (_) to follow best practices for naming conventions.",
+  "case_name": "test_sourcetype_no_underscore",
+  "id": "best_practice_validator.sourcetype_no_underscore",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No underscores in sourcetypes",
+  "validation_results" : {
+    "8053": {
+        "description": "The ${stype} sourcetype contains an underscore (_).",
+        "solution": "Change the underscore (_) in ${stype} to a colon (:).",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8097": {
+        "description": "The ${stype} sourcetype contains an underscore (_).",
+        "solution": "Change the underscore (_) in sourcetype to a colon (:).",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8054": {
+        "description": "Sourcetype names do not contain underscores (_).",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

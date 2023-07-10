@@ -1,0 +1,33 @@
+.linkButton{
+    & > span {
+        padding:0 5px;
+        color:#1e93c6;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
+    .delimiter {
+        display:inline-block;
+        border-right:1px solid;
+    }
+}
+
+.root{
+
+}
+
+.error{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #d6563c;
+}
+
+.cell{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:inline-block;
+    width: 100%;
+}

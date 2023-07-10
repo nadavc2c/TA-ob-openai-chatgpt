@@ -1,0 +1,22 @@
+.root{
+    flex: 1;
+    height: calc(100% - 1px);
+    border-top: 1px solid #bfbfbf;
+    background-color: #ffffff;
+    width: calc(100% - 702px);
+}
+.body{
+    padding: 30px 120px 25px 120px;
+    height: calc(100% - 55px);
+    overflow-y: auto;
+}
+.bodySmall{
+    padding: 10px 120px 24px 120px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+.bodyContent {
+    min-height: 100%;
+    border: dashed 1px #bfbfbf;
+    box-sizing: border-box;
+}

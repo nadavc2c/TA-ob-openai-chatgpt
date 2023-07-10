@@ -1,0 +1,130 @@
+<div class="ta-nav-tab-container">
+    <div class="ta-nav-tab-header">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#modular_alert_definition" data-toggle="tab">Alert Action Inputs</a></li>
+            <li><a href="#global_definition" data-toggle="tab">Add-on Setup Parameters</a></li>
+        </ul>
+    </div>
+    <div class="ta-nav-tab-content tab-content">
+        <div class="ta-nav-tab-panel tab-pane active" id="modular_alert_definition">
+            <div class="ta-nav-tab-description">
+                Define the input fields that are required for your alert action.<br>
+                To create a form, drag and drop inputs from the Component Library to the alert action form in the middle panel. Then, specify the properties for each input in the Property Editor.
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+            </div>
+            <div class="ta-nav-tab-panel-content">
+                <div class="ta-playground">
+                    <div class="ta-playground-panel ta-playground-component-library">
+                        <div class="ta-playground-panel-title">
+                            <span>Component Library</span>
+                        </div>
+                        <div class="ta-playground-panel-body ta-playground-component-library-body" id="common_library_body">
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class="ta-playground-component-icon" src=<%- text_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Text</div>
+                            </div>
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class='ta-playground-component-icon' src=<%- dropdown_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Dropdown</div>
+                            </div>
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class='ta-playground-component-icon' src=<%- radio_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Radio Buttons</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ta-playground-panel ta-playground-editor">
+                        <div class="ta-playground-editor-header">
+                            <div class="ta-playground-editor-header-logo">
+                                <img width="36" height="36" src="<%- alert_logo %>"></img>
+                            </div>
+                            <abbr title="<%- alert_name %>" class="ta-playground-editor-header-name">
+                                <%- alert_name %>
+                            </abbr>
+                        </div>
+                        <div class="ta-playground-editor-body ta-playground-editor-body-small">
+                            <div class="ta-playground-editor-body-content" id="editor_body_content">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ta-playground-panel ta-playground-property-editor">
+                        <div class="ta-playground-panel-title">
+                            <span>Property Editor</span>
+                        </div>
+                        <div class="ta-playground-panel-body ta-playground-property-editor-body" id="parameter_property_editor">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ta-nav-tab-panel tab-pane <% if (!is_builtin) { %>higher-description<% } %>" id="global_definition">
+            <div class="ta-nav-tab-description">
+                Define the setup parameters that are used by the add-on.<br/>
+                This setup form is displayed to the user the first time the add-on runs. Select the type of parameters to add to the setup form from the list. Drag and drop inputs from the Component Library to add custom parameters. Then, specify the properties for each input in the Property Editor.
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+                <% if (!is_builtin) { %>
+                    <br/>
+                    <i class="icon-warning-sign" style="color: #d6563c;margin-left: 5px;margin-right: 5px;"></i>Any changes on this page will override the setup page of this add-on.
+                <% } %>
+            </div>
+            <div class="ta-nav-tab-panel-content">
+                <div class="ta-playground" id="global_body">
+                    <div class="ta-playground-panel ta-playground-component-library">
+                        <div class="ta-playground-panel-title">
+                            <span>Preconfigured Parameters</span>
+                        </div>
+                        <div class="ta-playground-panel-body ta-playground-component-parameters-body">
+
+                        </div>
+                        <div class="ta-playground-panel-title">
+                            <span>Component Library in Panel Setting</span>
+                        </div>
+                        <div class="ta-playground-panel-body ta-playground-component-library-body"  id="global_common_library_body">
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class="ta-playground-component-icon" src=<%- text_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Text</div>
+                            </div>
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class='ta-playground-component-icon' src=<%- password_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Password</div>
+                            </div>
+                            <div class="ta-playground-component-item">
+                                <div class="ta-playground-component-img-wrap">
+                                    <img class='ta-playground-component-icon' src=<%- checkbox_icon %>></img>
+                                </div>
+                                <div class="ta-playground-component-name">Checkbox</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ta-playground-panel ta-playground-editor">
+                        <div class="ta-playground-editor-body">
+                            <div class="ta-playground-editor-body-content" id="global_editor_body_content">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ta-playground-panel ta-playground-property-editor">
+                        <div class="ta-playground-panel-title">
+                            <span>Property Editor</span>
+                        </div>
+                        <div class="ta-playground-panel-body ta-playground-property-editor-body" id="global_property_editor">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

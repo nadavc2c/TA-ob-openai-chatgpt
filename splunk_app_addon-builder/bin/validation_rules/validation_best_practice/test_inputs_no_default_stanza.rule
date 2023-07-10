@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove or merge duplicate stanzas.",
+  "description": "Inputs.conf should not contain duplicate stanza headers. Inputs.conf should not contain a [default] stanza, which might affect other add-ons.",
+  "case_name": "test_inputs_no_default_stanza",
+  "id": "best_practice_validator.inputs_no_default_stanza",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No default stanza in inputs",
+  "validation_results" : {
+    "8023": {
+        "description": "A duplicate stanza name [${stanza}] was found in the inputs.conf file.",
+        "solution": "Remove or merge the duplicate [${stanza}] stanza.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8024": {
+        "description": "A [default] stanza was found in the inputs.conf file, which might affect other add-ons",
+        "solution": "Remove the [default] stanza from the inputs.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8025": {
+        "description": "The inputs.conf file does not have a [default] stanza.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

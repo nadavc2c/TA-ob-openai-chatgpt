@@ -1,0 +1,19 @@
+<%
+import re
+has_log_level = False
+%>
+% for datainput in datainputs:
+[${datainput['name']}]
+index = ${datainput['index']}
+start_by_shell = false
+python.version = python3
+sourcetype = ${datainput['sourcetype']}
+interval = ${datainput['interval']}
+python.version = python3
+% for option in datainput.get('data_inputs_options', []):
+% if len(str(option.get('default_value', ''))) > 0:
+${option['name']} = ${re.sub("([\r\n]+)", "", str(option.get('default_value', ''))).strip()}
+% endif
+% endfor
+
+% endfor

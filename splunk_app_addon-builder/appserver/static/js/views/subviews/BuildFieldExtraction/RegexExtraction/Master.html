@@ -1,0 +1,60 @@
+<div class='clearfix' style='padding: 20px;height: calc(100% - 40px);'>
+    <div class="ta-sub-view-field-extraction tbStep-view-regex-extraction">
+        <div class="tbStep-view-title">
+            <a class="ta-sub-view-return-link">
+                <%- _.t("Extract Fields")%>
+            </a>
+            <span class="ta-sub-view-connector"> >> </span>
+            <span class="ta-sub-view-subtitle"><%- sourcetype %></span>
+        </div>
+        <div class="tbStep-view-help-link">
+            <span class="help-description">
+                <%= helplink.description %>
+                <a class="external" target="_blank" href="<%- helplink.url %>">
+                    <%- _.t('Learn more') %>
+                </a>
+            </span>
+        </div>
+        <div class="tbStep-view-content">
+            <div class="tbStep-format-view-container">
+                <div class="regex-extraction-container">
+                    <div class="group-list-container">
+                        <div class="total-events">
+                            <%- numberOfEvents + ' ' + _.t('events in all') %>
+                        </div>
+                        <label class="all-checkbox checkbox">
+                            <a class="btn" data-toggle="tooltip" title="<%- _.t('Enable/Disable All') %>" checked>
+                                <i class="icon-check"></i>
+                            </a>
+                            <%- _.t('Enable/Disable All') %>
+                        </label>
+                        <div class="group-list">
+
+                        <ul>
+                            <% for (var i = 0; i < numberOfGroups; ++i) { %>
+                                <li data-index=<%- i %>>
+                                    <label class="group-checkbox checkbox">
+                                        <a class="btn" data-toggle="tooltip" title="<%- _.t('Enable/Disable') %>" checked>
+                                            <i class="icon-check"></i>
+                                        </a>
+                                    </label>
+                                    <div class="group-text">
+                                        <div class="group-title">
+                                            <%- _.t("Pattern") + (i + 1) %>
+                                        </div>
+                                        <div class="group-description">
+                                            <%- getDescription(i) %>
+                                        </div>
+                                    </div>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="regex-extraction-group-detail-container" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

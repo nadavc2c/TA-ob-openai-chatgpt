@@ -1,0 +1,23 @@
+{
+    "category": "best_practice_validation",
+    "description": "check the token in app.conf",
+    "case_name": "test_readme_document_link",
+    "id": "best_practice_validator.readme_document_link",
+    "class": "validation_best_practice.best_practice_rule.MatinalRule",
+    "name": "README documentation link",
+    "disabled": true,
+    "validation_results": {
+        "8086": {
+            "description": "The README.txt file does not contain a documentation link.",
+            "solution": "Add a documentation link to the README.txt file.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "8087": {
+            "description": "The README.txt file has a documentation link.",
+            "solution": "",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

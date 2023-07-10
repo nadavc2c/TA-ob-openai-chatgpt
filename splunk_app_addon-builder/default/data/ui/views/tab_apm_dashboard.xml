@@ -1,0 +1,72 @@
+<form version="1.1">
+    <label>Splunk Add-on Builder app performance monitoring dashboard</label>
+    <description>This dashboard shows the basic performance data for the Splunk Add-on Builder</description>
+
+    <fieldset submitButton="True">
+        <input type="time" searchWhenChanged="false" token="time_tok">
+            <label>Select time range</label>
+            <default>
+                <earliest>-1h@h</earliest>
+                <latest>now</latest>
+            </default>
+        </input>
+    </fieldset>
+
+    <row>
+        <panel>
+            <table id='top_30_slowest_call'>
+                <title>The top 30 slowest function calls</title>
+                <description>The slowest 30 function calls</description>
+                <search>
+                    <query>sourcetype="splunk:aob:monitor:metric" time_cost=* | sort 30 -time_cost| table function_name, metric_tags, time_cost, positional_args, _time
+                    </query>
+                    <earliest>$time_tok.earliest$</earliest>
+                    <latest>$time_tok.latest$</latest>
+                </search>
+            </table>
+        </panel>
+    </row>
+    <row>
+        <panel>
+            <chart id='top_10_slowest'>
+                <title>The top 10 slowest functions</title>
+                <description>The slowest 10 functions, check the average time cost</description>
+                <search>
+                    <query>sourcetype="splunk:aob:monitor:metric" time_cost=* | eval fname_and_tags = metric_tags + "->" + function_name |stats avg(time_cost) as avg_cost by fname_and_tags | sort 10 -avg_cost
+                    </query>
+                    <earliest>$time_tok.earliest$</earliest>
+                    <latest>$time_tok.latest$</latest>
+                </search>
+                <option name="charting.chart">column</option>
+                <option name="charting.axisTitleX.text">
+                    <![CDATA[
+tags & function_name
+]]>
+                </option>
+                <option name="charting.axisTitleY.text">
+                    Average time cost (ms)
+                </option>
+            </chart>
+        </panel>
+        <panel>
+            <chart id='top_10_callee'>
+                <title>Top 10 frequently called funtions</title>
+                <search>
+                    <query>sourcetype="splunk:aob:monitor:metric" action=invoke| eval fname_and_tags = metric_tags + "->" + function_name |stats count as call_times by fname_and_tags | sort 10 -call_times
+                    </query>
+                    <earliest>$time_tok.earliest$</earliest>
+                    <latest>$time_tok.latest$</latest>
+                </search>
+                <option name="charting.chart">bar</option>
+                <option name="charting.axisTitleX.text">
+                    Number of function calls
+                </option>
+                <option name="charting.axisTitleY.text">
+                    <![CDATA[
+tags & function_name
+]]>
+                </option>
+            </chart>
+        </panel>
+    </row>
+</form>

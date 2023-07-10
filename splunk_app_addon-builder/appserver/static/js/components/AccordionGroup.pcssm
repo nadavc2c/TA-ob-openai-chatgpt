@@ -1,0 +1,66 @@
+.root {
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.headNoInteraction {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    padding: 6px 15px 6px 20px;
+    pointer-events: none;
+}
+.head {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    padding: 6px 15px 6px 20px;
+    cursor: pointer;
+    &[disabled] {
+        cursor: not-allowed;
+        background-color: #f5f5f5;
+        a {
+            color: #999;
+            cursor: not-allowed;
+        }
+        &:hover,
+        &:focus {
+            background-color: #f5f5f5;
+        }
+    }
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+.toggle {
+    color: #333;
+    padding: 0;
+    user-select: none;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+        color: #333;
+        text-decoration: none;
+        background-color: transparent;
+        box-shadow: 0 0 0;
+    }
+}
+
+.toggleIcon {
+    position: absolute;
+    left: 8px;
+}
+
+.inner {
+    padding: 10px 20px 20px;
+    border: none;
+    position: relative;
+}
+
+.description {
+    margin-bottom: 10px;
+}

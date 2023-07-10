@@ -1,0 +1,18 @@
+.loadingStyle{
+    width: 100%;
+    position: absolute;
+    min-height: 348px;
+    background-color: rgba(255,255,255,1);
+    padding-left: 43%;
+    padding-top: 16%;
+    z-index: 2;
+    font-size: large;
+    font-weight: 200;
+    color: #999;
+}
+.cimMappingHeader{
+    padding: 20px;
+    button{
+        float:right;
+    }
+}

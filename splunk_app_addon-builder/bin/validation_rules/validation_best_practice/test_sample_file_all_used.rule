@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Add the sample file to the eventgen.conf file, or remove the sample from the samples folder.",
+  "description": "All sample files in the add-on should be used by eventgen.conf.",
+  "case_name": "test_sample_file_all_used",
+  "id": "best_practice_validator.sample_file_all_used",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Sample files in eventgen",
+  "validation_results" : {
+    "8050": {
+        "description": "The sample file ${fname} is not used.",
+        "solution": "Add the sample file ${fname} to the eventgen.conf file or remove ${fname} from the samples folder.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8051": {
+        "description": "The ${stanza} stanza in the eventgen.conf file does not match any sample file.",
+        "solution": "Add the sample file to the samples folder, or correct the stanza header.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8052": {
+        "description": "All sample files in the eventgen.conf file are used.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

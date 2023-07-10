@@ -1,0 +1,34 @@
+<div class="ta-playground-component-label radio_component">
+    <span class="required" style="
+        <% if (required) { %>
+            visibility: visible;
+        <% } else { %>
+            visibility: hidden;
+        <% } %>
+    ">*</span>
+    <%- label %>
+    <% if (internal_name) {%>
+        (<%- internal_name %>)
+    <% } %>
+</div>
+<div class="ta-playground-component-content radio_component">
+    <% for (var key in possible_values) { %>
+        <% if (possible_values.hasOwnProperty(key)) { %>
+            <div class="radio_option_item">
+                <div class="radio_option option_input">
+                    <input type="radio" name="<%- name %>" value="<%- possible_values[key] %>"
+                        <% if (possible_values[key] == default_value) { %>
+                            checked
+                        <% } %>
+                    />
+                </div>
+                <div class="radio_option option_label">
+                    <%- key %>
+                </div>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+<% if (help_string) { %>
+    <div class='help_string'><%- help_string %></div>
+<% } %>

@@ -1,0 +1,23 @@
+{
+    "category": "best_practice_validation",
+    "description": "Sample data has been anonymized.",
+    "case_name": "test_eventgen_sample_anonymized",
+    "id": "best_practice_validator.eventgen_sample_anonymized",
+    "class": "validation_best_practice.best_practice_rule.MatinalRule",
+    "name": "Anonymized sample data",
+    "disabled": true,
+    "validation_results": {
+        "8090": {
+            "description": "The sample file ${file} contains [${field_type}]: ${field_value}.",
+            "solution": "Replace this with a token for anonymizing.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "8091": {
+            "description": "Sample data has been anonymized.",
+            "solution": "",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

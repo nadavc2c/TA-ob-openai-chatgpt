@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Add an inputs.conf.spec file to the \"README\" folder.",
+  "description": "The add-on project should contain an inputs.conf.spec file.",
+  "case_name": "test_inputs_conf_spec_exist",
+  "id": "best_practice_validator.inputs_conf_spec_exist",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Inputs.conf.spec exists",
+  "validation_results": {
+      "8082": {
+          "description": "The inputs.conf.spec file is missing.",
+          "solution": "Add a copy of the inputs.conf.spec file to the add-on's \"README\" folder.",
+          "severity": "Warning",
+          "status": "Fail"
+      },
+      "8083": {
+          "description": "The inputs.conf.spec file exists.",
+          "solution": "",
+          "severity": "Pass",
+          "status": "Pass"
+      }
+  }
+}

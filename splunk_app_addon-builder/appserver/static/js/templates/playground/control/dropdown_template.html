@@ -1,0 +1,29 @@
+<div class="ta-playground-component-label">
+    <span class="required" style="
+        <% if (required) { %>
+            visibility: visible;
+        <% } else { %>
+            visibility: hidden;
+        <% } %>
+    ">*</span>
+    <%- label %>
+    <% if (internal_name) {%>
+        (<%- internal_name %>)
+    <% } %>
+</div>
+<div class="ta-playground-component-content">
+    <select name="<%- name %>">
+        <% for (var key in possible_values) { %>
+            <% if (possible_values.hasOwnProperty(key)) { %>
+                <option value="<%- possible_values[key] %>"
+                    <% if (possible_values[key] == default_value) { %>
+                        selected
+                    <% } %>
+                ><%- key %></option>
+            <% } %>
+        <% } %>
+    </select>
+</div>
+<% if (help_string) { %>
+    <div class='help_string'><%- help_string %></div>
+<% } %>

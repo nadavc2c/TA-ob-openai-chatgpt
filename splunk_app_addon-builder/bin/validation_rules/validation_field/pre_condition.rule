@@ -1,0 +1,23 @@
+{
+    "class": "validation_field.validator_rule_base.PreCondition",
+    "id": "field_extract_validator.pre_condition",
+    "name": "Pre-condition for all the validators",
+    "category": "field_extract_validation",
+    "remedy_suggestion": "Check the add-on events and sourcetypes.",
+    "description": "Get sourcetypes and events.",
+    "priority": 3,
+    "validation_results": {
+        "100": {
+            "description": "Cannot get any events for sourcetype \"${sourcetype}\"",
+            "solution"   : "Upload samples or create an input to index some events before validation",
+            "severity"   : "Warning",
+            "status"     : "Fail"
+        },
+        "101": {
+            "description": "Sourcetype \"${sourcetype}\" contains special characters.",
+            "solution": "Update the sourcetype name and try again.",
+            "severity": "Warning",
+            "status": "Fail"
+        }
+    }
+}

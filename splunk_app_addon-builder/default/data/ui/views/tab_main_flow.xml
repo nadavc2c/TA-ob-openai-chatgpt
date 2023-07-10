@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<view template="splunk_app_addon-builder:templates/main_flow_templ.html" type="html" isDashboard="False">
+    <label>Add-on Builder Main Flow</label>
+</view>

@@ -1,0 +1,7 @@
+% for _stanza, _properties in stanzas.items():
+[${_stanza}]
+% for _property_key, _property_value in _properties.items():
+${_property_key} = ${_property_value}
+% endfor
+
+% endfor

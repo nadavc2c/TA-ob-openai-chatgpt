@@ -1,0 +1,7 @@
+[expose:${appname}_setup]
+pattern = /${appname}_input_setup/${appname}_settings
+methods = GET, POST
+
+[expose:${appname}_settings]
+pattern = /${appname}_input_setup/${appname}_settings/*
+methods = GET, POST, DELETE

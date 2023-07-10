@@ -1,0 +1,38 @@
+<div class="ta-nav-tab-container">
+    <div class='ta-nav-tab-header'>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#basic_setting" data-toggle="tab">Data Input Properties</a></li>
+            <li><a href="#modular_input_definition" data-toggle="tab">Data Input Parameters</a></li>
+            <li class='tab_global_definition'><a href="#global_definition" data-toggle="tab">Add-on Setup Parameters</a></li>
+        </ul>
+    </div>
+    <div class="ta-nav-tab-content tab-content">
+        <div class="ta-nav-tab-panel tab-pane active" id="basic_setting">
+            <div class="ta-nav-tab-description">
+                Define the properties of your data input.
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+            </div>
+            <div class="ta-nav-tab-panel-content">
+                <div id="input_name"></div>
+            </div>
+        </div>
+        <div class="ta-nav-tab-panel tab-pane" id="modular_input_definition">
+            <div class="ta-nav-tab-description">
+                Define the parameters that are required for your data input.<br/>
+                To create a form, drag and drop inputs from the Component Library to the middle panel. Then, specify the properties for each input in the Property Editor.
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+            </div>
+            <div class="ta-nav-tab-panel-content" id='ta-own-parameters'>
+            </div>
+        </div>
+        <div class="ta-nav-tab-panel tab-pane" id="global_definition">
+            <div class="ta-nav-tab-description">
+                Define the setup parameters that are used by the add-on.<br/>
+                This setup form is displayed to the user the first time the add-on runs. Select the type of parameters to add to the setup form from the list. Drag and drop input fields from the Component Library to add custom parameters. Then, specify the properties for each input in the Property Editor.
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+            </div>
+            <div class="ta-nav-tab-panel-content"  id='ta-shared-parameters'>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="ta-playground-component-label">Text Input</div>
+<div class="display_label_field">
+    <label>Display label</label>
+    <input type="text" name="label" value="<%- label %>" />
+</div>
+<div class="internal_name_field">
+    <label>Internal name</label>
+    <input type="text" name="name" value="<%- name %>" />
+</div>
+<div class="default_value_field">
+    <label>Default value</label>
+    <input type="text" name="default_value" value="<%- default_value %>" placeholder="optional" />
+</div>
+<div class="help_string_field">
+    <label>Help text</label>
+    <textarea name="help_string" rows="4" placeholder="Optional. Max 200 characters"><%- help_string %></textarea>
+</div>
+<div class="required_field">
+    <div class="checkbox_block">
+        <input type="checkbox" name="required" <% if (required) { %>checked<% } %> />
+    </div>
+    <div class="checkbox_block">
+        Required
+    </div>
+</div>

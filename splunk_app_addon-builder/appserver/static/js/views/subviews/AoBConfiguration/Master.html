@@ -1,0 +1,83 @@
+<div class="ta-nav-tab-container">
+    <div class='ta-nav-tab-header'>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#account_configuration" data-toggle="tab">Configuration</a></li>
+            <li><a href="#partyjs_configuration" data-toggle="tab">Make Add-on Builder Better</a></li>
+        </ul>
+    </div>
+    <div class="ta-nav-tab-content tab-content">
+        <div class="ta-nav-tab-panel tab-pane active" id="account_configuration">
+            <div class="ta-nav-tab-description" style='padding-left:20px;padding-right:20px;'>
+                <%- _.t('Enter the login settings for your Splunk.com account. This information is required for the app precertification process.') %>
+                <a class="external" target="_blank" href="<%- helpUrl %>"><%- _.t('Learn More') %></a>
+            </div>
+            <div class="ta-nav-tab-panel-content">
+                <div class="ta-config-table">
+                    <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                    <input class="fraud-autofill-element" type="text" name="fakeusernameremembered"/>
+                    <input class="fraud-autofill-element" type="password" name="fakepasswordremembered"/>
+
+                    <div class="ta-config-save">
+                        <button type="button" class="btn save-proxy-class btn-primary">Save</button>
+                        <label class="save-success-class">Placeholder</label>
+                    </div>
+
+                    <div class="basic-settings-class">
+                        <div class="ta-config-input-group">
+                            <label>Username: </label>
+                            <input type="text" name="app_cert_user" placeholder="Username">
+                        </div>
+                        <div class="ta-config-input-group">
+                            <label>Password: </label>
+                            <input type="password" name="app_cert_pwd" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" class="proxy-enable-class">Enable proxy
+                    </label>
+
+                    <div class="proxy-settings-class ta-proxy-disabled">
+                        <div class="ta-config-input-group">
+                            <label>Proxy type: </label>
+                            <select class="proxy-type-class">
+                                <option>HTTP</option>
+                                <option>HTTPS</option>
+                            </select>
+                        </div>
+
+                        <div class="ta-config-input-group">
+                            <label>Proxy host: </label>
+                            <input type="text" name="app_cert_proxy_host" placeholder=" ">
+                        </div>
+
+                        <div class="ta-config-input-group">
+                            <label>Proxy port: </label>
+                            <input type="text" name="app_cert_proxy_port" placeholder="">
+                        </div>
+
+                        <div class="ta-config-input-group">
+                            <label>Proxy username: </label>
+                            <input type="text" name="app_cert_proxy_user" placeholder="">
+                        </div>
+
+                        <div class="ta-config-input-group">
+                            <label>Proxy password: </label>
+                            <input type="password" name="app_cert_proxy_pwd" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="ta-config-test">
+                        <button type="button" class="btn btn-primary test-app-cert-class">Test</button>
+                        <label class="test-text-class"></label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="ta-nav-tab-panel tab-pane" id="partyjs_configuration">
+
+        </div>
+    </div>
+</div>

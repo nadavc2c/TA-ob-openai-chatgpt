@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Modify the panel title.",
+  "description": "Validate the panel title.",
+  "case_name": "test_panel_title_check",
+  "id": "best_practice_validator.panel_title_check",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Prebuilt panel titles",
+  "validation_results" : {
+    "8032": {
+        "description": "Panel ${fname}: ${warning_msg}.",
+        "solution": "Modify ${fname} to fix the warning ${warning_msg}.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8033": {
+        "description": "Prebuilt panel titles follow best practices.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

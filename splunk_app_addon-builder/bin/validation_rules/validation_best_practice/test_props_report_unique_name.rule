@@ -1,0 +1,24 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Change the report name in props.conf.",
+  "description": "Reports should not be defined multiple times in props.conf.",
+  "case_name": "test_props_report_unique_name",
+  "id": "best_practice_validator.props_report_unique_name",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Unique names for props reports",
+  "disabled": true,
+  "validation_results" : {
+    "8040": {
+        "description": "The ${item} REPORT is defined multiple times in the [${stanza}] stanza in the props.conf file.",
+        "solution": "Change the ${item} REPORT name in the [${stanza}] stanza in the props.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8041": {
+        "description": "REPORT in the props.conf file have unique names.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

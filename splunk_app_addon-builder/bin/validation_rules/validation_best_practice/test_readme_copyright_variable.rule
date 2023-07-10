@@ -1,0 +1,22 @@
+{
+  "category": "best_practice_validation",
+  "case_name": "test_readme_copyright_variable",
+  "id": "best_practice_validator.readme_copyright_variable",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "README copyright variable",
+  "disabled": true,
+  "validation_results" : {
+    "8042": {
+        "description": "The README.txt file does not contain any copyright information.",
+        "solution": "Add copyright information to the README.txt file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8043": {
+        "description": "The README.txt file contains copyright information.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

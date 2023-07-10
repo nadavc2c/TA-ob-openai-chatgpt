@@ -1,0 +1,62 @@
+.CollapsiblePanel{
+    width:100%;
+    border-bottom:1px solid #d5d5d5;
+    button{
+        padding-left:0px;
+        width: 90%;
+    }
+}
+
+.CollapsiblePanelContent{
+    width:98%;
+    button {
+        display:none;
+    }
+}
+
+.action{
+    display: inline-block;
+    float: right;
+    .tailButton{
+        cursor:pointer;
+    }
+}
+
+.path{
+    color: #5c6773;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.firstAndLastPath{
+    color: #5c6773;
+    white-space: nowrap;
+}
+
+.iconStyle{
+    width:9px;
+    height:9px;
+    margin-right:5px;
+    color: #5c6773;
+}
+
+.pathContainer{
+    max-width: 93%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.collapsiblePanelButton{
+    width: calc(100% - 18px);
+    display: flex;
+    margin-left: 1%;
+    justify-content: flex-start;
+    align-items: center;
+    height: 33px;
+}
+.deleteButton{
+    margin-left: auto;
+}

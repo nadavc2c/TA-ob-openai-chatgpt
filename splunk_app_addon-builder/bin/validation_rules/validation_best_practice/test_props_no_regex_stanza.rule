@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Avoid using regular expressions in stanza headers in props.conf.",
+  "description": "Avoid using regular expressions in stanza headers in props.conf.",
+  "case_name": "test_props_no_regex_stanza",
+  "id": "best_practice_validator.props_no_regex_stanza",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No regex in props stanzas",
+  "validation_results" : {
+    "8038": {
+        "description": "The [${stanza}] stanza header in the props.conf file uses a regular expression.",
+        "solution": "Remove the regular expression from the [${stanza}] stanza header.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8039": {
+        "description": "Stanza headers in props.conf do not use regular expressions.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

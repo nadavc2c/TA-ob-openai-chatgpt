@@ -1,0 +1,53 @@
+.linkButton{
+    & > span {
+        padding:0 5px;
+        color:#1e93c6;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
+    .delimiter {
+        display:inline-block;
+        border-right:1px solid;
+    }
+}
+
+.paginator{
+    float:right;
+    padding: 10px;
+}
+
+.tableSummary{
+    padding: 10px 20px;
+}
+
+.warningIcon{
+    color: #f1b10e;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.tableHeader{
+    tr th:nth-child(1) {
+        width:22%;
+    }
+    tr th:nth-child(2) {
+        width:22%;
+    }
+    tr th:nth-child(3) {
+        width:22%;
+    }
+    tr th:nth-child(4) {
+        width:24%;
+    }
+    tr th:nth-child(5) {
+        width:10%;
+    }
+}
+
+.tableCell{
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

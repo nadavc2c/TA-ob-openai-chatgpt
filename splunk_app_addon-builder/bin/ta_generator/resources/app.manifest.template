@@ -1,0 +1,54 @@
+<% import re %>
+{
+  "schemaVersion": "1.0.0",
+  "info": {
+    "title": "${friendly_name}",
+    "id": {
+      "group": null,
+      "name": "${app_name}",
+      "version": "${version}"
+    },
+    "author": [
+      {
+        "name": "${author}",
+        "email": null,
+        "company": null
+      }
+    ],
+    "releaseDate": null,
+    "description": "${re.sub("([\r\n]+)", "", description).strip()}",
+    "classification": {
+      "intendedAudience": null,
+      "categories": [],
+      "developmentStatus": null
+    },
+    "commonInformationModels": null,
+    "license": {
+      "name": null,
+      "text": null,
+      "uri": null
+    },
+    "privacyPolicy": {
+      "name": null,
+      "text": null,
+      "uri": null
+    },
+    "releaseNotes": {
+      "name": null,
+      "text": null,
+      "uri": null
+    }
+  },
+  "dependencies": {
+  },
+  "tasks": [],
+  "inputGroups": {
+  },
+  "incompatibleApps": {
+  },
+  "platformRequirements": {
+    "splunk": {
+      "Enterprise": "*"
+    }
+  }
+}

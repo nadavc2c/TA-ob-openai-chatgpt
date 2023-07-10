@@ -1,0 +1,8 @@
+<%page args="mod_alert, param"/>
+<%inherit file="basecontrol.html"/>
+<%namespace file="helper.html" import="expand_ctrl_props"/>
+<%block name="control" args="mod_alert, param">
+<textarea name="action.${mod_alert.short_name}.param.${param.name}" id="${mod_alert.short_name}_${param.name}" style="height: 120px;"
+    ${expand_ctrl_props(param, ["name", "id", "style"])} >
+</textarea>
+</%block>

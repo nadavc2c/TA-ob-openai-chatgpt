@@ -1,0 +1,136 @@
+.ta-sub-view-summary {
+    min-height: 640px;
+}
+.ta-sub-view-summary-content {
+    width: 100%;
+    height: calc(100% - 370px);
+    position: relative;
+    min-height: 240px;
+    .ta-quick-link-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 240px;
+        width: 100%;
+        .ta-quick-link{
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            height: 100%;
+            width: 230px;
+            cursor: initial;
+            margin-left: calc(33% - 154px);
+            .ta-quick-link-icon {
+            }
+
+            .ta-quick-link-title {
+                position: absolute;
+                top: 184px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                margin-top: 5px;
+                height: 21px;
+                line-height: 21px;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 700;
+                color: $splunkGreen;
+                width: 230px;
+                height: 21px;
+            }
+            .ta-quick-link-description {
+                position: absolute;
+                top: 205px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 21px;
+                color: #4a4a4a;
+                width: 230px;
+                height: 21px;
+                .ta-quick-link-desc-text{
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+
+        .ta-download-link{
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            height: 100%;
+            width: 230px;
+            cursor: not-allowed;
+            margin-left: calc(25% - 172.5px);
+
+            .ta-download-link-icon {
+            }
+            .ta-download-link-title{
+                position: absolute;
+                top: 184px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+                height: 21px;
+                a{
+                    line-height: 21px;
+                    font-family: Roboto;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #b2b9bf;
+                    text-decoration: none;
+                }
+            }
+            .ta-download-link-description{
+                position: absolute;
+                top: 205px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 7px;
+                a{
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    color: #b2b9bf;
+                    text-decoration: none;
+                }
+            }
+            &.ta-download-enabled {
+                cursor: initial;
+                .ta-download-link-title{
+                    cursor: pointer;
+                    a{
+                        color: $splunkGreen;
+                    }
+                }
+                .ta-download-link-description{
+                    cursor: pointer;
+                    a{
+                        color: #4a4a4a;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.root{
+    width: 340px;
+    min-width: 340px;
+    border-right: 1px solid #bfbfbf;
+    height: 100%;
+}
+
+.checkBoxGroup {
+    height: 130px;
+}
+.library {
+    height: calc(100% - 130px);
+}

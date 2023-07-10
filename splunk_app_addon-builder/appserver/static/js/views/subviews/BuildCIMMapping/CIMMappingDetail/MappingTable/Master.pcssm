@@ -1,0 +1,23 @@
+.root{
+    clear: both;
+    height: calc(100% - 76px);
+    width: 100%;
+    overflow: auto;
+    table {
+        table-layout: fixed;
+        width: 100%;
+        th:first-child {
+            padding-left: 12px;
+        }
+        td:first-child {
+            padding-left: 20px;
+        }
+    }
+}
+
+.wait{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}

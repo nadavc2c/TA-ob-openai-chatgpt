@@ -1,0 +1,23 @@
+<div class="browserWarning" style="display: none;padding-top:40px;padding-bottom:40px;">
+    <div class="alert alert-error">
+        <i class="icon-alert"></i><%- _.t('Your browser does not support file uploads. Please download and install the latest version or use another supported browser to access this feature.') %> <a class="external" href="<%- helpLinkBrowser %>" target="_blank"> <%- _.t('Learn More') %></a>
+    </div>
+</div>
+
+<div class="ta-upload-control-wrapper">
+    <div>
+        <a class="btn">
+            <%-
+            _.t(
+                isOptional
+                ? 'Upload Data (optional)'
+                : 'Upload Data'
+            )
+            %>
+        </a>
+        <span class="source-label"></span>
+        <span class="event-label"></span>
+        <span class="progress-msg"></span>
+    </div>
+    <input type="file" id="inputReference" name="spl-file" style="display:none;"/>
+</div>

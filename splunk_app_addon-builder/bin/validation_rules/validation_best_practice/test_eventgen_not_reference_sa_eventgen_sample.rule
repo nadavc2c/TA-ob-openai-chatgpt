@@ -1,0 +1,24 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Use only samples defined in add-on package.",
+  "description": "Eventgen.conf should not contain SA-Eventgen reference.",
+  "case_name": "test_eventgen_not_reference_sa_eventgen_sample",
+  "id": "best_practice_validator.eventgen_not_reference_sa_eventgen_sample",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No SA-Eventgen reference in eventgen",
+  "disabled": true,
+  "validation_results" : {
+    "8094": {
+        "description": "Reference on SA-Eventgen samples has been found in the eventgen.conf file.",
+        "solution": "Remove SA-Eventgen reference in eventgen.conf.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8095": {
+        "description": "The eventgen.conf file has no SA-Eventgen reference.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

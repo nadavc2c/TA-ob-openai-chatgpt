@@ -1,0 +1,10 @@
+{
+"class": "validation_field.validator_rule_coverage.RuleRegexCoverage",
+  "id": "field_extract_validator.regex_coverage",
+  "name": "Regular expression coverage",
+  "category": "field_extract_validation",
+  "remedy_suggestion": "Regular expression coverage solution.",
+  "description": "Validate the coverage of regular expressions.",
+  "priority": 5,
+  "disabled": true
+}

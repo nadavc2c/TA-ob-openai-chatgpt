@@ -1,0 +1,28 @@
+{
+  "class": "validation_field.validator_rule_coverage.RuleFieldCoverage",
+  "id": "field_extract_validator.field_coverage",
+  "name": "Validate field coverage",
+  "category": "data_model_mapping_validation",
+  "remedy_suggestion": "Add more regular expressions or add a default value for this field.",
+  "description": "Validate data model fields to determine whether they have correct coverage.",
+  "priority": 4,
+  "validation_results": {
+        "3000": {
+            "description": "Coverage of the \"${field_name}\" field in the \"${eventtype}\" event type is ${coverage}, which is lower than the threshold value of ${value}.",
+            "solution": "Check whether you should add more regular expressions or add default values for this field.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "3001": {
+            "description": "Check the coverage of the \"${field_name}\" field within the \"${eventtype}\" event type.",
+            "severity": "Pass",
+            "status": "Pass"
+        },
+        "3002": {
+            "description": "Cannot get any events for eventtype \"${eventtype}\"",
+            "solution": "Upload samples or create an input to index some events before validation",
+            "severity": "Warning",
+            "status": "Fail"
+        }
+    }
+}

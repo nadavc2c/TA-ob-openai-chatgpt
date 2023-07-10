@@ -1,0 +1,41 @@
+{
+    "class": "validation_field.validator_rule_base.RuleGetObjects",
+    "id": "field_extract_validator.get_objects",
+    "name": "Get objects for field extraction",
+    "category": "field_extract_validation",
+    "remedy_suggestion": "Check the add-on configuration.",
+    "description": "Get the knowledge_objects for the add-on.",
+    "priority": 2,
+    "validation_results": {
+        "1000": {
+            "description": "The \"${object_name}\" object doesn't have a value.",
+            "solution": "Add a value for the \"${object_name}\" object in \"${stanza}\".",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "1001": {
+            "description": "The ${format} format is invalid in the \"${object_name}\" object in the \"${stanza}\" stanza.",
+            "solution": "Update the format.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "1002": {
+            "description": "Cannot find the \"${stanza}\" stanza for the \"${object_name}\" object.",
+            "solution": "Add the \"${stanza}\" stanza to the transforms.conf file for this object.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "1003": {
+            "description": "\"FIELDS\" is found without valid \"DELIMS\" in \"${stanza}\" for the \"${object_name}\" object.",
+            "solution": "Add DELIMS in \"${stanza}\" stanza of the transforms.conf for this object.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "1004": {
+            "description": "The \"DELIMS\" should have 2 delims in \"${stanza}\" stanza for the \"${object_name}\" object.",
+            "solution": "Update the DELIMS in \"${stanza}\" stanza of the transforms.conf file for this object.",
+            "severity": "Fatal",
+            "status": "Fail"
+        }
+    }
+}

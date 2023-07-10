@@ -1,0 +1,21 @@
+.root{
+    width: 400px;
+}
+
+.help{
+    padding-bottom: 10px;
+}
+
+.wait {
+    display: inline-block;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.progress {
+    padding-right: 10px;
+}
+
+.noClose button{
+    display: none;
+}

@@ -1,0 +1,11 @@
+<div class="help-title">
+    <%- title %>
+</div>
+<div class="help-description">
+    <%= description %>
+    <% if (_.isString(url) && url !== '') { %>
+        <a class="external" target="_blank" href="<%- url %>">
+            <%- _.t('Learn more') %>
+        </a>
+    <% } %>
+</div>

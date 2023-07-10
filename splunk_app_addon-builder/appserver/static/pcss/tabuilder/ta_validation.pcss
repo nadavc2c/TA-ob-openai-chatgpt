@@ -1,0 +1,298 @@
+.ta-sub-view-validation-content {
+    height: calc(100% - 75px);
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+    .ta-help-link-header.no-description + & {
+        height: calc(100% - 35px);
+    }
+    .ta-sub-view-validation-controller-container {
+        height: 35px;
+        margin: 13px 20px 20px 20px;
+        .ta-download-block-container {
+            margin: auto;
+            .ta-img-container {
+                float: left;
+                top: 0;
+                width: 38px;
+                height: 38px;
+                left: 0;
+                position:relative;
+            }
+            .ta-control-btn-container {
+                float: right;
+                margin-left: 5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                .btn-download {
+                    border-radius: 4px;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 5px 25px 5px 50px;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 20px;
+                        top: 0;
+                        width: 25px;
+                        height: 25px;
+                        background-image: url('../img/icon/icon-download-black.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    &[disabled]:after {
+                        background-image: url('../img/icon/icon-download-gray.svg');
+                    }
+                }
+            }
+        }
+        .ta-validation-form-container {
+            height: 30px;
+            width: 1000px;
+            margin: 4px;
+            .ta-validation-selector-container{
+                width: 601px;
+                display: inline-block;
+                text-align: start;
+                height:100%;
+                .select2-container {
+                    margin-bottom: 0;
+                    ul.select2-choices {
+                        height: 28px !important;
+                        li.select2-search-choice {
+                            padding: 3px 40px 3px 5px;
+                            height: 16px;
+                            line-height: 16px;
+                            & > div {
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                            .select2-search-choice-close {
+                                top: 5px;
+                                right: 5px;
+                                left: initial;
+                            }
+                        }
+                    }
+                }
+            }
+            .ta-validation-btn-container{
+                display: inline-block;
+                margin-left: 10px;
+                .validate-button {
+                    border-radius: 4px;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 5px 5px;
+                    width: 120px;
+                }
+            }
+            .ta-validation-progress-msg {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                margin-left: 10px;
+                img{
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    .ta-validation-overall-container {
+        height: 400px;
+        margin: 20px;
+        width: calc(100% - 40px);
+        .ta-section-left {
+            height: calc(100% - 30px);
+            width: 50%;
+            display: inline-block;
+            position: relative;
+            .ta-section-top {
+                height: 250px;
+                width: 100%;
+                top: 0;
+                position: absolute;
+                .ta-health-score-container {
+                    height: 100%;
+                    width: 310px;
+                    margin-left: calc(45% - 310px);
+                    display: inline-block;
+                }
+                .ta-certification-ready-banner {
+                    position: absolute;
+                    height: 100%;
+                    width: 55%;
+                    display: inline-block;
+                    .ta-cert-title {
+                        font-size: 28px;
+                        font-weight: bold;
+                        line-height: 120%;
+                        margin-top: 70px;
+                    }
+                    .ta-cert-description {
+                        margin-top: 12px;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        line-height: 1.17;
+                        color: #4a4a4a;
+                    }
+                    .ta-cert-error {
+                        margin-top: 15px;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        line-height: 1.17;
+                        color: #4a4a4a;
+                        .ta-question-icon {
+                            color: #4a90e2;
+                        }
+                    }
+                }
+            }
+            .ta-section-bottom {
+                height: 120px;
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+        .ta-section-right {
+            height: calc(100% - 30px);
+            width: 50%;
+            display: inline-block;
+        }
+    }
+    .ta-validation-detail-container {
+        position: absolute;
+        top: 450px;
+        left:0;
+        width: 100%;
+        h3 {
+            margin-left: 20px;
+        }
+        .ta-validation-detail-table {
+            position: absolute;
+            top: 35px;
+            margin: 0 0 30px 0;
+            width: 100%;
+            .dashboard-element {
+                margin-bottom: 0;
+                .panel-body {
+                    height: 100%;
+                    .splunk-table {
+                        margin-top: 0;
+                        .results-table {
+                            height: 100%;
+                            table {
+                                thead th:first-child,
+                                tbody td:first-child {
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Custom Icons */
+td.icon {
+    text-align: left;
+}
+td.icon i {
+    font-size: 20px;
+    padding-right: 5px;
+}
+td.icon .severe {
+    color: #ff4f5a;
+}
+td.icon .elevated {
+    color: #ffd162;
+}
+td.icon .low {
+    color: #5dc05c;
+}
+.ta-chart-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.ta-search-presenter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.ta-search-presenter.ta-single-value-presenter {
+    height: 100%;
+    width: 33.33%;
+    position: relative;
+    float: left;
+    user-select: none;
+    &.is-interaction-enabled {
+        cursor: pointer;
+    }
+    &.is-interaction-enabled:hover,
+    &.is-selected {
+        background: #eee;
+    }
+    .ta-value-container {
+        font-family: Roboto;
+        font-size: 80px;
+        line-height: 95px;
+        font-weight: 700;
+        text-align: center;
+        color: #4a4a4a;
+        position: relative;
+    }
+    .ta-title-container{
+        text-align: center;
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        .ta-icon {
+            font-size: 18px;
+            margin-right: 2px;
+        }
+        .ta-title {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+    }
+    .icon-error {
+        color: #ff4f5a
+    }
+    .icon-warning {
+        color: #ffd162
+    }
+    .icon-box-checked {
+        color: #5dc05c
+    }
+}
+
+.ta-waiting-for-data {
+    font-size: 13px;
+    color: #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-weight: normal;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+#alert-modal {
+    .ta-certification-dialog {
+        width: 80%;
+        left: calc(10% + 225px); /* there is -225 margin in the parent */
+    }
+}

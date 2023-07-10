@@ -1,0 +1,108 @@
+.cardContainer {
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.iconImage{
+    width: 100px;
+    height: 100px;
+}
+
+.cardViewFlex{
+    @media screen and (max-width: 1279px) {
+        width: calc(100% / 3 - 8px);
+        height: calc(100% / 6);
+    }
+    @media screen and (min-width: 1280px) {
+        width: calc(100% / 4 - 8px);
+        height: calc(100% / 8);
+    }
+    @media screen and (min-width: 1600px) {
+        width: calc(100% / 5 - 8px);
+        height: calc(100% / 10);
+    }
+    background-color: white;
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+}
+
+.cardViewFlexInner{
+    width:100%;
+    position: relative;
+    margin-bottom: 8px;
+    border: 1px solid #d7d7d7;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardViewFlexImgAndInfo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width:100%;
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60%;
+    height:120px;
+    .cardName{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
+        height: 30%;
+    }
+    .cardSub{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        border: 0;
+        height: 25%;
+    }
+}
+.cardAction{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    .actionLabel{
+        text-overflow:ellipsis;
+        overflow:hidden;
+        border:0;
+        width: 20%;
+        &:after{
+            content:'\0020'
+        }
+    }
+    .actionGroup{
+        .actionButton{
+            margin-left: 2px;
+            &:before{
+              content:"|\0020";
+            }
+        }
+        .actionButtonFirst{
+            margin-left: 2px;
+        }
+    }
+}
+.cardCheckbox{
+    position: absolute;
+    margin-left: 93%;
+}
+.cardWarningIcon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

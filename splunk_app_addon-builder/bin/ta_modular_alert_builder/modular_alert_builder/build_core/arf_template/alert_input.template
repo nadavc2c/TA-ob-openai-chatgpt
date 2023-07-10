@@ -1,0 +1,29 @@
+<%page args="alert_input_setting"/>
+{
+	<%
+		from json import dumps
+		results = alert_input_setting.get("results")
+		results = dumps(results)
+		%>\
+    "results": ${results},
+    "stdin_fields":
+    {
+        "owner": "${alert_input_setting.stdin_fields.get("owner")}",
+        "app": "${alert_input_setting.stdin_fields.get("app")}",
+        "server_host": "${alert_input_setting.stdin_fields.get("server_host")}",
+        "search_name": "${alert_input_setting.stdin_fields.get("search_name")}",
+        "results_link": "${alert_input_setting.stdin_fields.get("results_link")}",
+        "sid": "${alert_input_setting.stdin_fields.get("sid")}",
+        "session_key": "${alert_input_setting.stdin_fields.get("session_key")}",
+        "server_uri": "${alert_input_setting.stdin_fields.get("server_uri")}",
+        "results_file": "${alert_input_setting.stdin_fields.get("results_file")}",
+        "search_uri": "${alert_input_setting.stdin_fields.get("search_uri")}",
+        "result": ${alert_input_setting.stdin_fields.get("result")},
+		<% 
+			from json import dumps 
+			configuration = alert_input_setting.get("configuration").toDict()
+			configuration = dumps(configuration)
+		%>\
+        "configuration": ${configuration}
+    }
+}

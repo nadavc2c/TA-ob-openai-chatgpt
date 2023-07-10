@@ -1,0 +1,36 @@
+<% import re %>
+# this add-on is powered by splunk Add-on builder
+[install]
+state_change_requires_restart = false
+is_configured = false
+state = enabled
+build = ${build_no or 1}
+
+[launcher]
+% if author:
+author = ${author}
+% endif
+% if version:
+version = ${version}
+% endif
+% if description:
+description = ${re.sub("([\r\n]+)", "", description).strip()}
+% endif
+
+[ui]
+% if visible:
+is_visible = 1
+% else:
+is_visible = 0
+% endif
+label = ${friendly_name}
+docs_section_override = AddOns:released
+
+[package]
+id = ${app_name}
+
+[triggers]
+reload.addon_builder = simple
+reload.${app_namespace.lower()}_account = simple
+reload.${app_namespace.lower()}_settings = simple
+reload.passwords = simple

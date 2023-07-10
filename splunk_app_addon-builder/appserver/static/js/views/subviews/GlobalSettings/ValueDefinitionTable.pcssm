@@ -1,0 +1,24 @@
+.root{
+    width: 100%;
+    height: 100%;
+}
+.table{
+    tr{
+        th{
+            font-weight: 400;
+            color: #3c444d;
+            width: 230px;
+            text-align: left;
+        }
+        td{
+            width: 230px;
+        }
+    }
+}
+.remove{
+    color: rgba(155, 155, 155, 0.6);
+    cursor: pointer;
+}
+.remove:hover{
+    color: #9b9b9b;
+}

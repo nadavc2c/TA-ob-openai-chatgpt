@@ -1,0 +1,23 @@
+.root{
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+.title{
+    background-image: linear-gradient(to bottom, rgb(247, 247, 247), #eee);
+    background-repeat: repeat-x;
+    background-color: #eee;
+    border: 1px solid #bfbfbf;
+    color: #333;
+    box-shadow: inset 0px 1px 0 rgb(252, 252, 252);
+    text-shadow: none;
+    border-left: none;
+    border-right: none;
+    padding: 7px 0px 0px 20px;
+    height: 21px;
+}
+.body{
+    padding: 20px;
+    height: calc(100% - 70px);
+    overflow: auto;
+}

@@ -1,0 +1,34 @@
+{
+    "class": "validation_field.validator_rule_conflict.RuleFieldConflict",
+    "id": "field_extract_validator.field_conflict",
+    "name": "Validate field conflicts",
+    "category": "field_extract_validation",
+    "remedy_suggestion": "Conflict solution.",
+    "description": "Validate the input or output field conflict.",
+    "priority": 6,
+    "validation_results": {
+        "2000": {
+            "description": "The existing field \"${field_name}\" is overwritten by the \"${object_name}\" object in the \"${sourcetype}\" sourcetype.",
+            "solution": "Use a different field name for the \"${object_name}\" object in the \"${sourcetype}\" sourcetype.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "2001": {
+            "description": "The knowledge object \"${object_name}\" is not used by any events in the \"${sourcetype}\" sourcetype. Some of the dependent fields might be missing.",
+            "solution": "Check the dependency of the \"${object_name}\" object in the \"${sourcetype}\" sourcetype, or remove the object.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "2002": {
+            "description": "The knowledge object \"${object_name}\" is not used by any events in the \"${sourcetype}\" sourcetype.",
+            "solution": "Remove the \"${object_name}\"  object from the \"${sourcetype}\" sourcetype or update it.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "2003": {
+            "description": "Pass the field validation for knowledge object \"${object_name}\" in sourcetype \"${sourcetype}\".",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

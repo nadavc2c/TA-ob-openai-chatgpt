@@ -1,0 +1,469 @@
+$groupActiveColor: #ccc;
+$groupDescriptionColor: #999;
+$backgroundColor: #fff;
+$errorBackgroundColor: #f9e8e5;
+$pencilColor: #3863a0;
+.ta-sub-view-field-extraction {
+    .ta-label {
+        font-weight: bold;
+        margin: 5px 0;
+    }
+}
+.tbStep-sourcetype-format-control-panel{
+    height: 110px;
+    width: calc(100% - 40px);
+    padding: 0 20px 25px 20px;
+}
+.tbStep-sourcetype-panel {
+    margin-bottom: 10px;
+    width: 275px;
+    float: left;
+    .tbSelect-container {
+        margin: 5px 0;
+    }
+}
+.tbStep-startstop-penal {
+    float: right;
+    margin: 80px 0 10px 5px;
+    .btn-parse,
+    .btn-load,
+    .btn-delete {
+        float: left;
+        margin-left: 10px;
+        width: 80px;
+    }
+}
+.ta-group-error-msg {
+    line-height: 30px;
+    margin-left: 10px;
+    color: $tabuilderErrorColor;
+    float: right;
+    margin-top: 80px;
+    max-width: calc(100% - 420px);
+}
+.ta-group-parsing-msg {
+    line-height: 30px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 80px;
+    img{
+        margin: 0 5px;
+    }
+}
+.ta-sourcetype-ext-table {
+    .table-container {
+        table {
+            th:nth-child(1) {
+                width: 25%;
+            }
+            th:nth-child(2) {
+                width: 25%;
+            }
+            th:nth-child(4) {
+                width: 180px;
+            }
+        }
+    }
+}
+.ta-sub-view-field-extraction .data-summary {
+    margin: 10px 0;
+    height: 85px;
+    border-bottom: 1px solid #c5cdd6;
+    position: relative;
+    dl{
+        position: absolute;
+        dt{
+            font-weight: normal;
+            position: absolute;
+            left: 0;
+            width: 70px;
+        }
+        dd{
+            font-weight: bold;
+            margin-left: 100px;
+            max-width: 190px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &:nth-of-type(odd){
+            top: 12px;
+        }
+        &:nth-of-type(even){
+            top: 40px;
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4){
+            left: 300px;
+        }
+    }
+}
+.ta-sub-view-field-extraction .event-table {
+    min-width:700px;
+    .filter-container-top {
+        float: left;
+        margin-right: 10px;
+    }
+    .message-container-top {
+        float: left;
+        color: $groupDescriptionColor;
+        font-size: 11px;
+        line-height: 25px;
+    }
+    .pagination-container-top {
+        float: right;
+        margin-bottom: 10px;
+    }
+    .table-container {
+        width: 100%;
+        overflow: auto;
+        table {
+            width: 100%;
+            tbody tr {
+                border-top: 1px solid $tabuilderGroupBorderColor;
+                border-bottom: 1px solid $tabuilderGroupBorderColor;
+                &:nth-child(even) {
+                    background: #f5f5f5;
+                }
+                &:hover {
+                    background: #ebebeb !important;
+                }
+                td{
+                    line-height: 25px;
+                    .event-content {
+                        font-family: 'Droid Sans Mono', 'Consolas', 'Monaco', 'Courier New', Courier, monospace;
+                        word-break: break-all;
+                        white-space: pre-wrap;
+                    }
+                    .icon {
+                        font-size: 15px;
+                        padding: 0 5px;
+                    }
+                    .icon-check-circle{
+                        color: $tabuilderSuccessColor;
+                    }
+                    .icon-x-circle{
+                        color: $tabuilderErrorColor;
+                    }
+                    .icon-alert{
+                        color: $tabuilderWarningColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.tbStep-view-json-extraction,
+.tbStep-view-xml-extraction {
+    height: 100%;
+    .event-table {
+        height: calc(100% - 110px);
+        .table-container {
+            width:100%;
+            height: calc(100% - 35px);
+            overflow-y: auto;
+            margin-top:10px;
+            margin-bottom:0;
+            table {
+                td {
+                    line-height: 16px !important;
+                }
+                td:nth-child(1){
+                    padding: 4px;
+                    text-align: center;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+.ta-sub-view-field-extraction.tbStep-view-kv-extraction{
+    height: 100%;
+    .tbStep-view-help-link {
+        height: 80px;
+    }
+    .tbStep-view-content{
+        height: calc(100% - 120px);
+    }
+}
+.tbStep-view-kv-extraction{
+    .pair {
+        border-bottom: 1px solid $tabuilderErrorColor;
+    }
+    .key {
+        background: #dbd2eb;
+        border-top: 3px solid #dbd2eb;
+    }
+    .value {
+        background: #f7e0ab;
+        border-top: 3px solid #f7e0ab;
+    }
+    .extraction-select {
+        margin: 12px 0;
+        position: relative;
+        height: 130px;
+        width: 100%;
+        .extraction-select-container {
+            position: absolute;
+            left: 0;
+            width: 275px;
+            height: 100%;
+        }
+        .extraction-select-container::after {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            content: "";
+            height: 80%;
+            width: 1px;
+            background: #c5cdd6;
+        }
+        .extraction-method-configure-container {
+            margin-left: 295px;
+            width: calc(100% - 295px);
+            height: 100%;
+            .ta-label {
+                display: inline-block;
+            }
+            .optional-container {
+                height: 100%;
+                width: 100%;
+            }
+            .sub-optional-container {
+                width: 100%;
+                height: calc(100% - 65px);
+                margin-top: 12px;
+            }
+            .delimiter-container {
+                .kv-delimiter {
+                    margin-top: 15px;
+                }
+            }
+            .regex-template-container {
+                .regex-template {
+                    width: calc(100% - 140px);
+                    display: inline-block;
+                }
+                .btn-edit {
+                    margin-left: 10px;
+                    vertical-align: top;
+                    width: 100px;
+                }
+            }
+            .regex-container {
+                textarea {
+                    width: calc(100% - 154px);
+                    height: calc(100% - 10px);
+                    resize: none;
+                    margin-bottom: 0;
+                }
+                .btn-apply {
+                    margin-left: 10px;
+                    vertical-align: top;
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .event-table {
+        height: calc(100% - 265px);
+        min-width: 900px;
+        .pagination-container-top {
+            float: right;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            width:100%;
+            height: calc(100% - 25px);
+            overflow-y: auto;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .icon-question-circle {
+            color: $tabuilderErrorColor;
+        }
+    }
+}
+.tbStep-view-table-extraction {
+    height: 100%;
+    .event-table {
+        height: calc(100% - 150px);
+        margin-bottom: 0;
+        position: relative;
+        .pagination-container-top{
+            position: absolute;
+            top: -36px;
+            right: 0;
+        }
+        .table-container{
+            width:100%;
+            height: 100%;
+            overflow: auto;
+            margin-top: 10px;
+            margin-bottom: 0;
+            table {
+                th {
+                    i {
+                        cursor: pointer;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.ta-sub-view-field-extraction.tbStep-view-regex-extraction{
+    height: 100%;
+}
+.tbStep-format-view-container {
+    float: left;
+    clear: both;
+    width: calc(100% - 36px);
+    height: 100%;
+    position: relative;
+    .tbSource-label {
+        margin-left: 5px;
+        font-weight: bold;
+    }
+    .regex-extraction-label {
+        font-weight: bold;
+    }
+    .triangle-indicator {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -21px;
+        border-top: 10px solid transparent;
+        border-right: 10px solid $tabuilderGroupBorderColor;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        top: 0;
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 9px;
+            left: 7px;
+            border-top: 9px solid transparent;
+            border-right: 9px solid $backgroundColor;
+            border-bottom: 9px solid transparent;
+            border-left: 9px solid transparent;
+        }
+    }
+    .regex-extraction-container {
+        margin-top: 20px;
+        height: calc(100% - 30px);
+        .total-events {
+            height: 15px;
+            color: $groupDescriptionColor;
+        }
+        .group-list-container {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            height: calc(100% - 30px);
+            overflow-y: hidden;
+            label.all-checkbox {
+                height: 20px;
+            }
+            .group-list {
+                min-height: 445px;
+                height: calc(100% - 45px);
+                overflow-y: auto;
+            }
+            ul {
+                list-style-type: none;
+                width: 150px;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+            li {
+                line-height: 20px;
+                border-bottom: 1px solid $tabuilderGroupBorderColor;
+                cursor: pointer;
+                &:hover,
+                &.active {
+                    background: $groupActiveColor;
+                }
+                label.group-checkbox {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding-top: 2px;
+                }
+            }
+            .group-text {
+                display: inline-block;
+                width: 125px;
+            }
+            .group-title {
+                font-weight: bold;
+            }
+            .group-description {
+                color: $groupDescriptionColor;
+                font-size: 11px;
+            }
+        }
+        .regex-extraction-group-detail-container {
+            position: absolute;
+            left: 186px;
+            width: calc(100% - 186px);
+            min-height: 490px;
+            height: calc(100% - 30px);
+            border: 1px solid $tabuilderGroupBorderColor;
+            overflow-y: auto;
+        }
+        .regex-extraction-group-detail {
+            padding: 10px 15px;
+        }
+        .segment-container {
+            margin: 5px 0;
+        }
+        .pattern-container.segment-container {
+            margin-top: 0;
+            .regex-extraction-pattern {
+                word-break: break-all;
+            }
+        }
+        .regex-input-container {
+            textarea {
+                width: calc(100% - 36px);
+                word-break: break-all;
+                &.error {
+                    border: 1px solid $tabuilderErrorColor;
+                    background: $errorBackgroundColor;
+                }
+            }
+            .ta-regex-error-msg {
+                margin-left: 10px;
+                color: $tabuilderErrorColor;
+            }
+        }
+        .fields-container {
+            line-height: 25px;
+            .fields {
+                width: 100%;
+                clear: both;
+                .ta-colorful-label {
+                    margin: 0 5px 5px;
+                    padding: 0 5px;
+                    border-radius: 5px;
+                    float: left;
+                    cursor: pointer;
+                    user-select: none;
+                    .icon-action {
+                        padding-left: 4px;
+                        font-size: 14px;
+                        &:hover {
+                            color: $pencilColor;
+                        }
+                    }
+                }
+            }
+        }
+        .events-container {
+            float: left;
+            width: 100%;
+        }
+    }
+}

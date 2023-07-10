@@ -1,0 +1,11 @@
+.collapsiblePanelContent{
+    text-align:right;
+    margin-right: 26px;
+    .collapsiblePanelList{
+        padding:5px;
+    }
+    .collapsiblePanelCheckMark{
+        color:green;
+        float:left;
+    }
+}

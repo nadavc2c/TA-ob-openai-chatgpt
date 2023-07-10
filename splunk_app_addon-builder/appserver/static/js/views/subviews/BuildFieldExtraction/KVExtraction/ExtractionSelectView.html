@@ -1,0 +1,39 @@
+<div class="extraction-select-container">
+    <div class="ta-label">
+        <%- _.t("Extraction Methods")%>
+    </div>
+</div>
+<div class="extraction-method-configure-container">
+    <div class="optional-container delimiter-container">
+        <div class="pair-delimiter">
+            <div class="ta-label pair">
+                <%- _.t("Pair Delimiter")%>
+            </div>
+            <div class="pair-delimiter-btn-group"></div>
+        </div>
+        <div class="kv-delimiter">
+            <div class="ta-label pair">
+                <span class="key"><%- _.t("Key")%></span>
+                <span class="delimiter"></span>
+                <span class="value"><%- _.t("Value")%></span>
+            </div>
+            <div class="kv-delimiter-btn-group"></div>
+        </div>
+    </div>
+    <div class="optional-container regex-container">
+        <div class="regex-delimiter">
+            <div class="ta-label">
+                <%- _.t("Regex Delimiter")%>
+            </div>
+            <div class="regex-delimiter-btn-group"></div>
+        </div>
+        <div class="sub-optional-container regex-template-container">
+            <div class="regex-template"></div>
+            <a class="btn btn-primary btn-edit"><%- _.t("Edit")%></a>
+        </div>
+        <div class="sub-optional-container regex-custom-container">
+            <textarea id="tb-kv-regex"></textarea>
+            <a class="btn btn-primary btn-apply"><%- _.t("Apply")%></a>
+        </div>
+    </div>
+</div>

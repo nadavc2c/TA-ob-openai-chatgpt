@@ -1,0 +1,62 @@
+#basic-info-modal .modal {
+    width: 700px;
+    left: 50%;
+    margin-left: -350px;
+    .form {
+        overflow-x: hidden;
+    }
+    .modal-body {
+        padding-top: 40px;
+        &.is-showing-error{
+            padding-top: 0;
+        }
+    }
+}
+.ta-sub-view-basic-info {
+    position: relative;
+    .ta-editable-text-control {
+        width: 374px;
+    }
+    .control-group{
+        margin-bottom: 30px;
+    }
+    input, textarea, .uneditable-input {
+        width: 360px;
+    }
+    textarea {
+        max-width: 360px;
+        min-height: 50px;
+    }
+    .control.shared-controls-textcontrol input {
+        padding-right: 6px;
+    }
+    input.sp-input {
+        width: 173px;
+    }
+    .ta-error-msg-banner {
+        border: 2px solid $tabuilderErrorColor;
+        color: $tabuilderErrorColor;
+        padding: 5px;
+        margin: 10px;
+    }
+    .ta-file-upload {
+        .ta-icon-container {
+            margin-right: 5px;
+        }
+        .btn-upload-file {
+            width: 140px;
+            font-size: 12px;
+            padding: 5px 10px;
+            margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                outline: 0;
+            }
+            &+span {
+                font-weight: bold;
+            }
+        }
+    }
+}

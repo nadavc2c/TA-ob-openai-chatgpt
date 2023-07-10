@@ -1,0 +1,481 @@
+.ta-step-choose-method {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .ta-icon-radio-group {
+        position: absolute;
+        top: 90px;
+        height: 295px;
+        width: 100%;
+        .ta-icon-radio {
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            height: 100%;
+            line-height: 100%;
+            width: 230px;
+            cursor: initial;
+            margin-left: calc(25% - 172.5px);
+            vertical-align: middle;
+            .ta-icon-radio-icon .ta-icon-large{
+                cursor: pointer;
+            }
+            .ta-icon-radio-subtitle  {
+                position: absolute;
+                top: 184px;
+                width: 230px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                cursor: pointer;
+                height: 18px;
+                line-height: 18px;
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 400;
+                color: $splunkGreen;
+                margin-top: 7px;
+            }
+            .ta-icon-radio-title {
+                position: absolute;
+                top: 202px;
+                width: 230px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                margin-top: 5px;
+                height: 21px;
+                line-height: 21px;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 700;
+                color: $splunkGreen;
+            }
+            .ta-icon-radio-description {
+                position: absolute;
+                top: 223px;
+                width: 230px;
+                height: 21px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 21px;
+                color: #4a4a4a;
+                .ta-icon-radio-desc-text {
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+.ta-sub-view {
+    .ta-step-view {
+        position: relative;
+        width:100%;
+        height:100%;
+        min-height: 460px;
+        overflow: auto;
+        .ta-error-msg-banner {
+            margin: 0 0 10px 0;
+        }
+        &.ta-parameter-global-setting {
+            .ta-setting-details {
+                display: inline-block;
+                width: 400px;
+                .ta-setting {
+                    font-size: 12px;
+                    margin-bottom:12px;
+                    .ta-label {
+                        color: #000;
+                        vertical-align: top;
+                        padding-top: 4px;
+                        .optional {
+                            padding-left: 8px;
+                        }
+                    }
+                    .ta-form-input {
+                        padding-left: 8px;
+                        width: 220px;
+                        display: inline-block;
+                        .form-control {
+                            width: 100%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .ta-code-test-sub-container {
+            .ta-setting-details {
+                display: inline-block;
+                width: 360px;
+                .ta-setting {
+                    font-size: 12px;
+                    margin-bottom:12px;
+                    .ta-label {
+                        color: #000;
+                        vertical-align: top;
+                        width: 150px;
+                        display: inline-block;
+                        text-align: right;
+                        &.ta-label-align-with-table {
+                            position: relative;
+                            top: 20px;
+                        }
+                    }
+                    .ta-form-input {
+                        width: 170px;
+                        display: inline-block;
+                        margin-left: 15px;
+                        &[name=rest_api_method] {
+                            width: 184px;
+                        }
+                        .form-control {
+                            width: 100%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .ta-table {
+                    margin-left: 15px;
+                    width: 184px;
+                    display: inline-block;
+                    .editable-table {
+                        margin: 0;
+                        thead tr {
+                            height: 20px;
+                            th {
+                                font-weight: normal;
+                                padding: 0;
+                                vertical-align: top;
+                                height: 20px;
+                                line-height: 20px;
+                                &:last-child{
+                                    padding-right:0;
+                                }
+                            }
+                        }
+                        tbody tr{
+                            height: 30px;
+                            td {
+                                height: 30px;
+                                line-height: 30px;
+                                border: 0;
+                                padding: 0 10px 0 0;
+                                vertical-align: middle;
+                                &.action-column{
+                                    padding: 0 !important;
+                                }
+                            }
+                        }
+                        input {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+            .ta-setting-details-rest {
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+                .event-extraction-header {
+                    font-weight: bold;
+                }
+               .event-checkpoint-controls {
+                width: 190px;
+               }
+            }
+        }
+    }
+}
+
+.ta-step-rest-input-definition,
+.ta-step-command-input-definition {
+    .selector-control {
+        width: 200px;
+    }
+    .ta-code-test-container {
+        .ta-test-output-container {
+            border-left: 1px solid #bbb;
+            flex: 1;
+        }
+    }
+}
+.ta-step-customized-input-definition {
+    .ta-code-test-container {
+        .ta-test-output-container {
+            display: none;
+            width: 25%;
+        }
+    }
+}
+.ta-step-rest-input-definition,
+.ta-step-command-input-definition,
+.ta-step-customized-input-definition {
+    .ta-sub-view-btn {
+        &.ta-btn-test,
+        &.ta-btn-save {
+            margin-top: 29px;
+            position: relative;
+            .icon-check-circle {
+                color: $tabuilderSuccessColor;
+                font-size: 25px;
+                position: absolute;
+                left: 10px;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+                height: 18px;
+            }
+        }
+    }
+}
+.ta-step-success {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        display: inline-block;
+        margin-left: 70px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .result {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        width: 331px;
+        height: 79px;
+        font-family: Roboto-Bold, Roboto;
+        font-size: 80px;
+        font-weight: 700;
+        text-align: center;
+        color: $splunkGreen;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 548px;
+        height: 460px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .cell {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 464px;
+        height: 265px;
+        background-color: #fcfcfc;
+        border: solid 2px $splunkGreen;
+        padding: 40px;
+        top: 80px;
+        margin-top: 30px;
+    }
+
+    .meta-data {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.67;
+        color: #4a4a4a;
+        color: var(--greyish-brown);
+
+        .name {
+            display: inline-block;
+            text-align: right;
+            width: 225px;
+        }
+
+        .value {
+            display: inline-block;
+            text-align: left;
+            width: 225px;
+            margin-left: 10px;
+        }
+    }
+
+    .delim-area {
+        position: relative;
+        .line {
+            width: 464px;
+            height: 1px;
+            border: none;
+            background-color: $splunkGreen;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .line-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 106px;
+            height: 20px;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            text-align: center;
+            color: $splunkGreen;
+            padding: 14px;
+            background-color: #fcfcfc;
+        }
+    }
+
+    .or {
+        width: 470px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 30px;
+        font-family: Roboto-Thin, Roboto;
+        font-weight: 100;
+        text-align: center;
+        color: $splunkGreen;
+        margin-top: 20px;
+    }
+
+    .options {
+        position: relative;
+
+        .left-option-logo {
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-left: 15px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .right-option-logo {
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            position: absolute;
+            right: 115px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .left-option-text {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            font-weight: 400;
+            color: $splunkGreen;
+        }
+
+        .right-option-text{
+            position: absolute;
+            top: 32px;
+            right: 15px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            font-weight: 400;
+            color: $splunkGreen;
+        }
+    }
+
+    button {
+        width: 210px;
+        margin-left: 15px;
+        height: 32px;
+        border-radius: 2px;
+        background-image: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+        box-shadow: inset 0 1px 0 0 #fdfdfd;
+        border: solid 1px #bfbfbf;
+
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        color: $tabuilderFontBlack;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    }
+}
+.ta-input-summary-container {
+    margin-top: 10px;
+    td {
+        word-break: break-all;
+        &:nth-child(2) {
+            width: 13%;
+        }
+        &:nth-child(3) {
+            width: 15%;
+        }
+        &:nth-child(4) {
+            width: 15%;
+        }
+        &:nth-child(5) {
+            width: 12%;
+        }
+        &:last-child {
+            width: 200px;
+        }
+    }
+}
+.mark-line {
+    position: absolute;
+    background: #ffff99;
+    border-radius: 0px 2px 2px 0px;
+    animation: 300ms wink;
+}
+.ace-mark-line-event {
+    position: absolute;
+    background: #ffff99;
+    border-radius: 0px 2px 2px 0px;
+    animation: 300ms wink;
+}
+.ace-mark-line-ckpt {
+    position: absolute;
+    background: #aaffff;
+    border-radius: 0px 2px 2px 0px;
+    animation: 300ms wink;
+}
+.event-checkpoint-controls {
+     width: 190px;
+}
+.fadeIcon {
+    transition: opacity 0.5s linear;
+    opacity:0;
+}
+.fade-in {
+  opacity:1;
+}

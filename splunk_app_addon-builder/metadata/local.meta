@@ -1,0 +1,51 @@
+[app/install/install_source_checksum]
+version = 9.0.5
+modtime = 1688482413.108349100
+
+[collections/ta_builder_meta_collection]
+owner = splunk-system-user
+version = 9.0.5
+modtime = 1688482423.628809300
+
+[collections/splunk_app_addon-builder]
+owner = splunk-system-user
+version = 9.0.5
+modtime = 1688482423.731835300
+
+[collections/ta_builder_event_collection]
+owner = splunk-system-user
+version = 9.0.5
+modtime = 1688482423.840365100
+
+[collections/_tab_internal_monitor_inputs_]
+owner = splunk-system-user
+version = 9.0.5
+modtime = 1688482426.804969400
+
+[ui-metrics-collector/collector]
+version = 9.0.5
+modtime = 1688482448.108264500
+
+[collections/TA-ob-openai-chatgpt]
+owner = admin
+version = 9.0.5
+modtime = 1688482458.407061500
+
+[passwords/credential%3Asplunk_app_addon-builder%3Aapp_cert%60%60splunk_cred_sep%60%601%3A]
+owner = admin
+version = 9.0.5
+modtime = 1688489014.378624700
+
+[passwords/credential%3Asplunk_app_addon-builder%3Aapp_cert%60%60splunk_cred_sep%60%602%3A]
+owner = admin
+version = 9.0.5
+modtime = 1688489014.409138000
+
+[settings/app_cert]
+version = 9.0.5
+modtime = 1688489014.456148500
+
+[collections/TA-test123]
+owner = admin
+version = 9.0.5
+modtime = 1688552807.471311200

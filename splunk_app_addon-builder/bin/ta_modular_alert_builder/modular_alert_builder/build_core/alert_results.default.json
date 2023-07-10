@@ -1,0 +1,37 @@
+{
+	"alert_mode": "Single",
+	"events_number": 1,
+	"search": "search index=*",
+	"timeout": 300,
+	"stdin_fields":
+	{
+		"owner": "admin",
+		"app": "search",
+		"server_host": "local_host",
+		"search_name": "test_arf",
+		"results_link": null,
+		"sid": null,
+		"session_key": null,
+		"server_uri": "https://127.0.0.1:8089",
+		"results_file": null,
+		"search_uri": "/servicesNS/admin/search/saved/searches/test_arf",
+		"result": null,
+		"configuration": {
+		}
+	},
+	"sample_result": {
+		"_raw": "This is an auto generated event to trigger modular alert.",
+		"_confstr": "source::",
+		"_time": null,
+		"_index_time": null,
+		"host": "localhost",
+		"source": "alert_event_gen",
+		"splunk_server": "localhost",
+		"sourcetype": "alert:events",
+		"timestamp": null,
+		"_serial": 1,
+		"_sourcetype": "alert:events",
+		"index": "main",
+		"_kv": 0
+	}
+}

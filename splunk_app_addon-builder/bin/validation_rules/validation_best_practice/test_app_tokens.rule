@@ -1,0 +1,54 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Put correct tokens in the app.conf file.",
+  "description": "Check the tokens in the app.conf file.",
+  "case_name": "test_app_tokens",
+  "id": "best_practice_validator.app_tokens",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Add-on tokens",
+  "disabled": true,
+  "validation_results" : {
+    "8071": {
+        "description": "A description field in the app.conf file is missing or its format is incorrect.",
+        "solution": "Add \"description = <%text>${friendly.name}</%text>\" to the [launcher] stanza of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8072": {
+        "description": "The version field in the app.conf file is missing or its format is incorrect.",
+        "solution": "Add \"version = <%text>${version.major}.${version.minor}.${version.revision}</%text>\" to the [launcher] stanza of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8073": {
+        "description": "The build field in the app.conf file is missing or its format is incorrect.",
+        "solution": "Add \"build = <%text>${version.build}</%text>\" to the [install] stanza of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8074": {
+        "description": "The package field in the app.conf file is missing or its format is incorrect.",
+        "solution": "Add \"package = <%text>${package.name}</%text>\" to the [package] stanza of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8075": {
+        "description": "<%text>${package.name}</%text> is missing from the comment header of the app.conf file.",
+        "solution": "Add a \"<%text>${package.name}</%text>\" comment to the header of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8076": {
+        "description": "<%text>${copyright}</%text> is missing from the comment header of the app.conf file.",
+        "solution": "Add a \"<%text>${copyright}</%text>\" comment to the header of the app.conf file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8077": {
+        "description": "The app.conf file contains the correct tokens.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

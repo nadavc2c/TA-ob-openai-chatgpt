@@ -1,0 +1,26 @@
+.root {
+    padding: 20px 20px 0 20px;
+    width: calc(100% - 40px);
+}
+
+.rootWithoutDescription {
+    composes: root;
+    min-height: 20px;
+}
+
+.title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #3c444d;
+}
+
+.description {
+    margin-top:5px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #4a4a4a;
+}

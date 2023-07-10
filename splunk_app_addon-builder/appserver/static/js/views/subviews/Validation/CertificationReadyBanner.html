@@ -1,0 +1,5 @@
+<div class='ta-cert-title'><%- _.t(title) %></div>
+<div class='ta-cert-description'><%- _.t(description) %></div>
+<% if (internalErrCnt > 0) { %>
+<div class='ta-cert-error'><i class='icon-question-circle ta-question-icon'></i><a class='ta-cert-detail-link'><%- _.t("There are ") + internalErrCnt + _.t(' app inspect internal errors.') %></a></div>
+<% } %>

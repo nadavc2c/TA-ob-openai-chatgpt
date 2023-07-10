@@ -1,0 +1,86 @@
+.root {
+    width: 100%;
+    height: 100%;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.fixedLayout {
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+.headerCellSideBar{
+    width:20%;
+    padding-left:12px;
+}
+.headerCellMain{
+    width:40%;
+    & > div:nth-child(1) > span:nth-child(1) {
+        width:100%;
+    }
+}
+.content{
+    position:relative;
+    height:calc(100vh - 196px);
+    overflow:auto;
+}
+.sideBarBody{
+    background-color:#f5f5f5;
+    border-right: 1px solid #d5d5d5;
+}
+.mainBody{
+    border-right: 1px solid #d5d5d5;
+}
+
+.searchBar{
+    width: 180px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.tableActionGroup{
+    float:right;
+    .actionButton{
+        margin-left:20px;
+        cursor:pointer;
+    }
+}
+.flexLableGroup{
+    display: flex;
+    justify-content: space-between;
+    span:nth-child(1){
+        flex-grow:2;
+    }
+    span:nth-child(2){
+        flex-grow: 1;
+        padding-left: 7px;
+        border-left: 1px solid #d5d5d5;
+        text-align: right;
+        margin-right: 10px;
+    }
+    span:nth-child(3){
+        border-left: 1px solid rgb(214, 214, 214);
+        padding: 0px 5px;
+    }
+}
+.staticLabel{
+    margin-left: 5px;
+    border-left: 1px solid #d6d6d6;
+    padding-left: 5px;
+}
+
+.searchBarEnd{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    .inputBox{
+        width: 180px;
+        margin-right: 54px;
+    }
+}

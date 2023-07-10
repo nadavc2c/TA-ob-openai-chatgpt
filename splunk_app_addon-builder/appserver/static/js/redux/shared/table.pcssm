@@ -1,0 +1,19 @@
+.loadingStyle{
+    width: 55%;
+    position: absolute;
+    margin-top: 26px;
+    height: 330px;
+    background-color: rgba(255,255,255,1);
+    padding-left: 45%;
+    padding-top: 2%;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 200;
+    color: #999;
+}
+.tableDefaultStyle{
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
+}

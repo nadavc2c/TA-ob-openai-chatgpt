@@ -1,0 +1,742 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: $tabuilderWhite;
+    height: 100%;
+}
+.ta-modal-dialog {
+    .paragraph {
+        line-height: 20px;
+    }
+}
+.table-container {
+    width:100%;
+    margin-bottom: 16px;
+    position: relative;
+    table.table {
+        margin-bottom: 0;
+        thead:first-child tr:first-child th {
+            border-top: solid 1px $tabuilderGroupBorderColor;
+        }
+        thead th{
+            /*font-weight: bold;*/
+            background-image: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+            border: solid 1px $tabuilderGroupBorderColor;
+        }
+        tr {
+            &:nth-child(even) {
+                background: #f5f5f5;
+            }
+            td {
+                border-top: 1px solid $tabuilderGroupBorderColor;
+                border-bottom: 1px solid $tabuilderGroupBorderColor;
+            }
+        }
+        tbody tr:hover {
+            background: #ebebeb !important;
+        }
+    }
+    div.table-loading {
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        color: #999;
+    }
+}
+.pagination-container-top {
+    text-align: right;
+}
+.pagination-container-bottom {
+    text-align: right;
+    padding-top: 4px;
+    height: 26px;
+}
+.editable-table {
+    margin: 10px 0;
+    th:first-child,
+    td:first-child {
+        padding-left: 5px;
+    }
+    thead th {
+        height: auto;
+        font-weight: bold;
+    }
+    tbody td {
+        padding: 5px 10px;
+        height: 25px;
+    }
+    input {
+        margin-bottom: 0;
+    }
+    .tbTable-editable-data {
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+    .action-column {
+        width: 28px !important;
+        padding: 5px 0 !important;
+        text-align: right !important;
+    }
+    .tbTable-icon {
+        cursor: pointer;
+        position: relative;
+        top: 3px;
+        padding: 0 4px;
+        line-height: 24px;
+        font-size: 18px;
+        color: $splunkGreen;
+        border: 1px solid $splunkGreen;
+        border-radius: 18px;
+    }
+}
+
+item {
+    .submit-dialog,
+    .delete-&,
+    .update-&,
+    .enable-&,
+    .disable-& {
+        cursor: pointer;
+    }
+}
+@media only screen and (min-height: 549px) and (max-height: 649px) {
+    .modal .modal-body {
+        max-height:350px;
+    }
+}
+.modal-body {
+    max-height: 500px;
+}
+.higherWider {
+    width: 550px;
+    left: 45%;
+}
+.higherWiderEx {
+    width: 700px;
+    left: 35%;
+}
+
+th.bs-checkbox {
+    padding-left: 0 !important;
+}
+td.bs-checkbox {
+    padding-left: 12px !important;
+}
+div.modal-body {
+    overflow: auto;
+}
+.tool {
+    &-bar {
+        position: relative;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    &-title h1 {
+        font-size: 24px;
+        font-weight: 200;
+        float: left;
+    }
+    &-button {
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    &-description {
+        clear: both;
+    }
+}
+.sidebar {
+    &-footer1 {
+        background: #f5f5f5;
+        width: 600px;
+        height: 65px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 15px;
+        bottom: 0;
+        padding-left: 360px;
+    }
+    &-footer2 {
+        background: #f5f5f5;
+        width: 600px;
+        height: 65px;
+        position: absolute;
+        padding-top: 30px;
+        padding-right: 15px;
+        bottom: 0;
+        padding-left: 860px;
+    }
+}
+.page-footer {
+    background: $tabuilderWhite;
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 0;
+}
+/*Metrics CSS*/
+.search {
+    &-choice-close {
+        display: block;
+        width: 12px;
+        height: 13px;
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        font-size: 1px;
+        outline: none;
+/*        background: url("select2.png") right top no-repeat;
+*/    }
+    &-choice {
+        float: left;
+        list-style: none;
+        padding: 3px 5px 3px 18px;
+        margin: 1px 0 1px 3px;
+        position: relative;
+        border: 1px solid #aaaaaa;
+        border-radius: 3px;
+        user-select: none;
+        background-color: #f4f4f4;
+        background-image: -moz-linear-gradient(top, #f8f8f8, #eee);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#eee));
+        background-image: -webkit-linear-gradient(top, #f8f8f8, #eee);
+        background-image: -o-linear-gradient(top, #f8f8f8, #eee);
+        background-image: linear-gradient(to bottom, #f8f8f8, #eee);
+        background-repeat: repeat-x;
+    }
+    &-choice div {
+        line-height: 16px;
+        margin-top: -2px;
+        margin-bottom: -1px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-item input {
+        background: transparent !important;
+        outline: 0;
+        border: 0;
+        width: 205px;
+    }
+}
+.container-multi {
+    width: 220px;
+    /*display:inline-block;*/
+}
+.choices {
+    height: auto !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: 1px solid #aaa;
+    cursor: text;
+    overflow: hidden;
+    background-color: $tabuilderWhite;
+    border-radius: 4px;
+}
+/*Input table checkbox CSS*/
+.col-checkbox {
+    width: 20px;
+    margin: 0;
+}
+.col-inline label {
+    display: inline;
+}
+.bulk-dropdown {
+    text-align: left !important;
+    padding-left: 20px;
+    float: left;
+    line-height: 36px;
+}
+/*Add button CSS*/
+.controls select {
+    margin-left: 3px;
+}
+select {
+    margin-bottom: 0;
+}
+form {
+    margin: 0;
+}
+form:last-child {
+    margin: 0;
+}
+.selector-control {
+    width: 220px;
+}
+.dialog-body {
+    margin: 0;
+    border-radius: 3px;
+    border: 1px solid #000;
+    background-color: $tabuilderWhite;
+    *zoom: 1;
+}
+.btn {
+    display: inline-block;
+}
+.select-item-ex-info {
+    float: right;
+    color: #999;
+    margin-right: 20px;
+}
+/*Add missing bootstrap css definition*/
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    white-space: normal;
+    background-color: $tabuilderWhite;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+.popover.top {
+    margin-top: -10px;
+}
+.popover.right {
+    margin-left: 10px;
+}
+.popover.bottom {
+    margin-top: 10px;
+}
+.popover.left {
+    margin-left: -10px;
+}
+.popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.popover-title:empty {
+    display: none;
+}
+.popover-content {
+    padding: 9px 14px;
+}
+.popover .arrow,
+.popover .arrow::after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.popover .arrow {
+    border-width: 11px;
+}
+.popover .arrow::after {
+    border-width: 10px;
+    content: "";
+}
+.popover.top .arrow {
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #999;
+    border-top-color: rgba(0, 0, 0, 0.25);
+    border-bottom-width: 0;
+}
+.popover.top .arrow::after {
+    bottom: 1px;
+    margin-left: -10px;
+    border-top-color: $tabuilderWhite;
+    border-bottom-width: 0;
+}
+.popover.right .arrow {
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-right-color: #999;
+    border-right-color: rgba(0, 0, 0, 0.25);
+    border-left-width: 0;
+}
+.popover.right .arrow::after {
+    bottom: -10px;
+    left: 1px;
+    border-right-color: $tabuilderWhite;
+    border-left-width: 0;
+}
+.popover.bottom .arrow {
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-top-width: 0;
+}
+.popover.bottom .arrow::after {
+    top: 1px;
+    margin-left: -10px;
+    border-bottom-color: $tabuilderWhite;
+    border-top-width: 0;
+}
+.popover.left .arrow {
+    top: 50%;
+    right: -11px;
+    margin-top: -11px;
+    border-left-color: #999;
+    border-left-color: rgba(0, 0, 0, 0.25);
+    border-right-width: 0;
+}
+.popover.left .arrow::after {
+    right: 1px;
+    bottom: -10px;
+    border-left-color: $tabuilderWhite;
+    border-right-width: 0;
+}
+/* Customization of bootstrap popover */
+.popover.popover-edit .popover-content {
+    width: 250px;
+    float: left;
+}
+.popover.popover-edit .popover-content .error-message {
+    color: $tabuilderErrorColor;
+}
+.popover.popover-edit .popover-content input {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    background-color: $tabuilderWhite;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    height: 16px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: calc(100% - 110px);
+}
+.popover.popover-edit .popover-content .btn.icon-check {
+    margin-right: 8px;
+}
+/* shake effect */
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-3px,0,0);
+        transform: translate3d(-3px,0,0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(3px,0,0);
+        transform: translate3d(3px,0,0);
+    }
+}
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-3px,0,0);
+        transform: translate3d(-3px,0,0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(3px,0,0);
+        transform: translate3d(3px,0,0);
+    }
+}
+.shake {
+    -webkit-animation: shake 0.8s;
+    animation: shake 0.8s;
+}
+a[disabled] {
+    color: #999 !important;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+.select2-container-disabled a {
+    cursor: not-allowed !important;
+}
+.btn-group {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+}
+.btn-group-radio-input-wrapper {
+    display: inline-block;
+    input{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 5px;
+        padding: 4px 10px;
+        width: 120px;
+    }
+}
+.ta-accordion-group {
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 0;
+    margin-bottom: 0;
+    .ta-accordion-heading {
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        padding: 6px 15px 6px 20px;
+        cursor: pointer;
+        &[disabled] {
+            cursor: not-allowed;
+            background-color: #f5f5f5;
+            a {
+                color: #999;
+                cursor: not-allowed;
+            }
+            &:hover,
+            &:focus {
+                background-color: #f5f5f5;
+            }
+        }
+        &:hover,
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .ta-accordion-toggle {
+            color: $tabuilderFontBlack;
+            padding: 0;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background-color: transparent;
+                box-shadow: 0 0 0;
+            }
+        }
+        .ta-icon-accordion-toggle {
+            position: absolute;
+            left: 8px;
+        }
+    }
+    .ta-accordion-inner {
+        padding: 10px 20px 20px;
+        border: none;
+        position: relative;
+    }
+}
+.control-group {
+    margin-bottom: 20px;
+    &::before {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
+    .control-label {
+        float: left;
+        padding-top: 5px;
+        text-align: right;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+.tooltip-inner {
+    overflow-wrap: break-word;
+}
+.ta-message-container {
+    overflow-wrap: break-word;
+}
+.ta-help-link-header {
+    padding: 20px 20px 0 20px;
+    width: calc(100% - 40px);
+    min-height: 60px;
+    &.no-description {
+        min-height: 20px;
+    }
+    .help-title {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 16px;
+        color: #3c444d;
+    }
+    .help-description {
+        margin-top:5px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        color: #4a4a4a;
+    }
+}
+.ta-addon-summary-footer {
+    position: absolute;
+    height: 270px;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    .ta-footer-title {
+        height: 25px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #3c444d;
+    }
+    .ta-footer-content {
+        margin-top: 12px;
+        height: calc(100% - 37px);
+        .ta-footer-block {
+            display: inline-block;
+            width: calc(20% - 48px);
+            height: calc(100% - 30px);
+            margin-right: 10px;
+            position: relative;
+            padding: 15px 20px;
+            background-color: #eee;
+            cursor: pointer;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            .ta-footer-block-title {
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 700;
+                height: 20px;
+                line-height: 20px;
+                color: $splunkGreen;
+            }
+            .ta-footer-block-description {
+                margin-top: 5px;
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 700;
+                height: 18px;
+                line-height: 18px;
+                color: #4a4a4a;
+            }
+            .ta-footer-block-content {
+                font-size: 120px;
+                font-weight: 700;
+                color: #4a4a4a;
+                height: 135px;
+                line-height: 135px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .icon-rotate {
+                font-size: 22px;
+                position: absolute;
+                right: 14px;
+                top: 14px;
+            }
+        }
+    }
+}
+.ta-editable-text-control {
+    height: 26px;
+    line-height: 26px;
+    width:100%;
+    .ta-display-text{
+        width: 100%;
+        word-break: break-all;
+        word-wrap: break-word;
+        a.ta-display-edit-link {
+            float: right;
+        }
+    }
+    .ta-editable-container{
+        width: 100%;
+        .ta-editable-text-control-container{
+            float: left;
+            width: calc(100% - 50px);
+            height: 26px;
+            input, textarea, .uneditable-input {
+                width: calc(100% - 14px);
+            }
+        }
+        .ta-editable-input-prefix{
+            position: absolute;
+            top: 1px;
+            left: 6px;
+            color: #999;
+            -webkit-user-select: none;
+        }
+        .icon {
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+            &.icon-check{
+                padding-left: 12px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .icon-check{
+        color: $tabuilderSuccessColor;
+    }
+    .icon-x{
+        color: $tabuilderErrorColor;
+    }
+}
+.ta-action-btn-panel {
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Override navigation tab shadow */
+.nav-tabs > li > a:focus {
+    box-shadow: none !important;
+}
+
+a:focus {
+    box-shadow: none !important;
+}
+input.fraud-autofill-element {
+    position:absolute;
+    z-index:-9999;
+    left:-9999px;
+    top:-9999px;
+    width:0;
+    height:0;
+}

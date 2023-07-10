@@ -1,0 +1,64 @@
+<div class="alert_definition_title">
+    <button class="btn pull-right ta-btn-save ta-sub-view-btn" id="save_code">
+        <i class="icon-check-circle" style="display: none;"></i>
+        <%- _.t('Save') %>
+    </button>
+    <div class="save_process loading">
+        <span class='ta-wait-spinner'/>
+    </div>
+    <button class="btn btn-primary pull-right ta-btn-test ta-sub-view-btn" id="test_code">
+        <%- _.t('Test') %>
+    </button>
+    <div class="test_process loading">
+        <span class='ta-wait-spinner'/>
+    </div>
+</div>
+<div class="ta-code-test-container">
+    <div class="ta-code-test-sub-container ta-alert-parameters-container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#modular_alert_definition" data-toggle="tab">Alert Action Parameters</a></li>
+            <li><a href="#global_definition" data-toggle="tab">Add-on Setup Parameters</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="modular_alert_definition">
+                <div class="ta-parameters-container-header">
+                    <div class="ta-parameters-container-logo">
+                        <img width="36" height="36" src="<%- alert_logo %>"></img>
+                    </div>
+                    <abbr title="<%- alert_name %>" class="ta-parameters-container-name">
+                        <%- alert_name %>
+                    </abbr>
+                </div>
+            </div>
+            <div class="tab-pane" id="global_definition">
+            </div>
+        </div>
+    </div>
+    <div class="ta-code-test-sub-container ta-code-editor-container">
+        <ul class="nav nav-tabs">
+            <div class="ta-test-code-arrows pull-left">
+                <div class="ta-test-code-arrow">
+                    <a><i class="icon-arrow-left"></i></a>
+                </div>
+                <div class="ta-test-code-arrow">
+                    <a><i class="icon-arrow-right" style="display:none;"></i></a>
+                </div>
+            </div>
+
+            <div class="ta-test-code-nav-field">
+                <span>Code Editor</span>
+            </div>
+
+            <div class="ta-test-code-arrows pull-right">
+                <div class="ta-test-code-arrow">
+                    <a><i class="icon-arrow-left"></i></a>
+                </div>
+                <div class="ta-test-code-arrow">
+                    <a><i class="icon-arrow-right" style="display:none;"></i></a>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="ta-code-test-sub-container ta-test-output-container">
+    </div>
+</div>

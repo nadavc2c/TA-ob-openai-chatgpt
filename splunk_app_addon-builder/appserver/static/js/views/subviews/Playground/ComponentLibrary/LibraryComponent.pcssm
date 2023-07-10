@@ -1,0 +1,29 @@
+.root {
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    position: relative;
+    cursor: move;
+    cursor: grab;
+    float: left;
+}
+.imgWrap {
+    width: 55px;
+    height: 62px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    left: 20px;
+}
+.img {
+    width: 100%;
+    height: 100%;
+}
+.title{
+    height: 14px;
+    text-align: center;
+}
+.isGrabbing {
+    cursor: grabbing;
+}

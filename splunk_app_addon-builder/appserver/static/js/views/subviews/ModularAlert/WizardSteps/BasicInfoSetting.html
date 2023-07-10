@@ -1,0 +1,109 @@
+<div class="section-body">
+    <div class='modularalert-basic-fields'>
+      <div id="input_name"></div>
+
+        <div class="modularalert-basic-field">
+            <label class="ta-label">
+                <%- _.t('Logo') %>
+            </label>
+            <div class="modularalert-input logo">
+
+            </div>
+        </div>
+        <div class="modularalert-basic-field arf-checkbox">
+            <div class="modularalert-input">
+                <div class="checkbox-row">
+                    <input type="checkbox" class="form-control" name="modular_alert_arf">
+                </div>
+                <div class="checkbox-row">
+                    Support as an adaptive response action in Splunk Enterprise Security
+                </div>
+                <div class="checkbox-row">
+                    <a href="#" data-toggle="tooltip" title="Configure this action to appear in the list of possible adaptive response actions in Splunk Enterprise Security">
+                        <i class="icon-info-circle adaptive_response_help"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modularalert-arf-field">
+            <div class="arf_field_block">
+                <div class="arf-basic">
+                    <span><%- _.t('Category') %></span>
+                </div>
+                <div class="arf-basic">
+                    <span><%- _.t('Task') %></span>
+                </div>
+                <div class="arf-basic">
+                    <span><%- _.t('Subject') %></span>
+                </div>
+            </div>
+            <div class="arf_field_block">
+                <div class="arf-basic disabled" name="modularalert-arf-group"></div>
+                <div class="arf-basic disabled" name="modularalert-arf-task"></div>
+                <div class="arf-basic disabled" name="modularalert-arf-subject"></div>
+            </div>
+            <div class="arf_field_block">
+                <!-- <label class="ta-label"><%- _.t('Technology') %></label> -->
+                <div class="">
+                    <div class="arf-basic">
+                        <span><%- _.t('Vendor') %></span>
+                    </div>
+                    <div class="arf-basic">
+                        <span><%- _.t('Product') %></span>
+                    </div>
+                    <div class="arf-basic">
+                        <span><%- _.t('Version') %></span>
+                    </div>
+                </div>
+                <div class="technology_options">
+                    <div class="technology_option">
+                        <div class="arf-basic modularalert-input">
+                            <input type="text" class="form-control" name="modular_alert_vendor" placeholder="" disabled="disabled" />
+                        </div>
+                        <div class="arf-basic modularalert-input">
+                            <input type="text" class="form-control" name="modular_alert_product" placeholder="" disabled="disabled" />
+                        </div>
+                        <div class="arf-basic modularalert-input modular_alert_version">
+                            <input type="text" class="form-control" name="modular_alert_version" placeholder="" disabled="disabled" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arf_field_block">
+                <div class="checkbox-row">
+                    <input type="checkbox" class="form-control" name="supports_adhoc">
+                </div>
+                <div class="checkbox-row">
+                    Support as an ad-hoc action
+                </div>
+                <div class="checkbox-row">
+                    <a href="#" data-toggle="tooltip" title="Make this action available for manual invocation from the Incident Review dashboard">
+                        <i class="icon-info-circle supports_adhoc_help"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="arf_field_block">
+                <label>
+                    Custom Drilldown
+                    <a href="#" data-toggle="tooltip" title="A URL to a custom drilldown or view">
+                        <i class="icon-info-circle"></i>
+                    </a>
+                </label>
+                <div class="arf-basic modularalert-input">
+                    <input type="text" class="form-control" name="drilldown_uri" placeholder="Optional" disabled="disabled" />
+                </div>
+            </div>
+            <div class="arf_field_block">
+                <label>
+                    Source type
+                    <a href="#" data-toggle="tooltip" title="A source type for the response events produced by your action">
+                        <i class="icon-info-circle"></i>
+                    </a>
+                </label>
+                <div class="arf-basic modularalert-input">
+                    <input type="text" class="form-control" name="sourcetype" placeholder="Optional" disabled="disabled" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

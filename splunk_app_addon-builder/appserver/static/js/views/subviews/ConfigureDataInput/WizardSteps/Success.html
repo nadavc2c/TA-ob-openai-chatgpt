@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="result">
+        <%- resultTitle %>
+    </div>
+    <div class="cell">
+        <div class="meta-data">
+            <% _.each(metas, function(value, key){ %>
+                <div>
+                    <div class="name"><%- key %>: </div><div class="value"> <%- value %></div>
+                </div>
+            <% }) %>
+        </div>
+
+        <div class="delim-area">
+            <hr class="line"></hr>
+            <div class="line-text">
+                <%- lineText %>
+            </div>
+        </div>
+        <div class="options">
+
+        </div>
+    </div>
+</div>

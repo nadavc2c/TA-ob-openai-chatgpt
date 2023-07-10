@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Change tag values to \"enabled\" or \"disabled\".",
+  "description": "Values in tags.conf should be set to \"enabled\" or \"disabled\".",
+  "case_name": "test_tags_value",
+  "id": "best_practice_validator.tags_value",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Tags values",
+  "validation_results": {
+      "8088": {
+          "description": "An unexpected value ${value} was found in the tags.conf file.",
+          "solution": "Change the tag value ${value} to \"enabled\" or \"disabled\".",
+          "severity": "Warning",
+          "status": "Fail"
+      },
+      "8089": {
+          "description": "Values are correct in the tags.conf file.",
+          "solution": "",
+          "severity": "Pass",
+          "status": "Pass"
+      }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title"><%= _.t('Warning') %></h3>
+        </div>
+        <form class="form form-horizontal" role="form" onsubmit="return false;">
+            <div class="modal-body">
+                <div class="paragraph">
+                    <%= _.t(content) %>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class='btn btn-primary ta-btn-back pull-right'>
+                    <%= _.t('Back') %>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

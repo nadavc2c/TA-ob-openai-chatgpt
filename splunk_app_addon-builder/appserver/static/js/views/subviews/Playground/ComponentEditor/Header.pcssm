@@ -1,0 +1,13 @@
+.root{
+    margin-left: 75px;
+    margin-top: 30px;
+    height: 36px;
+}
+.text {
+    display: inline-block;
+    margin-left: 10px;
+}
+.icon {
+    display: inline-block;
+
+}

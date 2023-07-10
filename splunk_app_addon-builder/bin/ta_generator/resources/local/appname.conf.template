@@ -1,0 +1,13 @@
+[global_settings]
+log_level = INFO
+
+% if use_proxy:
+[proxy_settings]
+proxy_enabled = 0
+proxy_url =
+proxy_port =
+proxy_username =
+proxy_password =
+proxy_rdns = 0
+proxy_type = http
+% endif

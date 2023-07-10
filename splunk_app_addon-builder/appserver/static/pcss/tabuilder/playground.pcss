@@ -1,0 +1,286 @@
+.ta-parameter-global-setting {
+    .ta-nav-tab-container {
+        width: 100%;
+        height: 100%;
+        .ta-nav-tab-header{
+            width: 100%;
+            height: 26px;
+            .ta-nav-tab-description{
+                padding: 0 20px 16px 20px;
+            }
+        }
+        .ta-nav-tab-content {
+            width: 100%;
+            height: calc(100% - 26px);
+
+            .ta-nav-tab-panel {
+                width: 100%;
+                height: 100%;
+                .ta-nav-tab-description {
+                    padding: 20px;
+                    height: 40px;
+                }
+                .ta-nav-tab-panel-content {
+                    height: calc(100% - 80px);
+                }
+                &.higher-description {
+                    .ta-nav-tab-description {
+                        height: 60px;
+                    }
+                    .ta-nav-tab-panel-content {
+                        height: calc(100% - 100px);
+                    }
+                }
+                .ta-setting-details {
+                    padding: 20px;
+                    width: calc(100% - 40px);
+                    height: calc(100% - 41px);
+                    border-top: 1px solid #bfbfbf;
+                }
+                .ta-playground {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    background-color: $tabuilderBackgroudGray;
+
+                    .ta-playground-component-item {
+                        cursor: move;
+                        cursor: grab;
+                    }
+
+                    .ta-playground-panel {
+                        &.ta-playground-component-library {
+                            width: 340px;
+                            min-width: 340px;
+                            border-right: 1px solid #bfbfbf;
+                            .ta-playground-component-parameters-body {
+                                padding: 20px;
+                                height: initial;
+                                label.checkbox{
+                                    user-select: none;
+                                }
+                            }
+                            .ta-playground-component-library-body {
+                                height: calc(100% - 200px);
+                                .ta-playground-component-item {
+                                    display: inline-block;
+                                    width: 95px;
+                                    height: 95px;
+                                    position: relative;
+                                    .ta-playground-component-img-wrap {
+                                        width: 55px;
+                                        height: 62px;
+                                        vertical-align: middle;
+                                        display: table-cell;
+                                        text-align: center;
+                                        position: relative;
+                                        padding-left: 20px;
+                                    }
+
+                                    .ta-playground-component-icon {
+                                        max-width: 55px;
+                                        max-height: 100%;
+                                    }
+
+                                    .ta-playground-component-name {
+                                        height: 14px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                        &.ta-playground-editor {
+                            flex: 1;
+                            height: calc(100% - 1px);
+                            border-top: 1px solid #bfbfbf;
+                            background-color: $tabuilderWhite;
+                            .ta-playground-editor-header {
+                                margin-left: 75px;
+                                margin-top: 30px;
+                                height: 36px;
+                                .ta-playground-editor-header-logo {
+                                    display: inline-block;
+                                }
+                                .ta-playground-editor-header-name {
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                    width:90%;
+                                    overflow:hidden;
+                                    text-overflow:ellipsis;
+                                    border:0;
+                                    cursor: default !important;
+                                }
+                            }
+                            .ta-playground-editor-body {
+                                padding: 30px 120px 25px 120px;
+                                height: calc(100% - 55px);
+                                overflow-y: auto;
+                                &.ta-playground-editor-body-small {
+                                    padding: 10px 120px 24px 120px;
+                                    height: calc(100% - 100px);
+                                }
+                                .ta-playground-editor-body-content {
+                                    min-height: 100%;
+                                    border: dashed 1px #bfbfbf;
+                                    box-sizing: border-box;
+                                }
+                                .ta-playground-component-item {
+                                    padding: 10px;
+                                    position: relative;
+
+                                    img {
+                                        height: 12px;
+                                        width: 12px;
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 10px;
+                                    }
+
+                                    .ta-playground-component-label {
+                                        display: inline-block;
+                                        width: 150px;
+                                        text-align: right;
+                                        /* Dismiss inline-block space */
+                                        margin-right: -3px;
+                                        word-wrap: break-word;
+                                        word-break: break-all;
+                                    }
+
+                                    .ta-playground-component-content {
+                                        display: inline-block;
+                                        margin-left: 13px;
+                                        /* Dismiss inline-block space */
+                                        margin-right: -3px;
+                                    }
+
+                                    .ta-playground-component-label.radio_component {
+                                        vertical-align: top;
+                                    }
+
+                                    .ta-playground-component-content.radio_component {
+                                        vertical-align: top;
+                                    }
+
+                                    input[type="text"], input[type="password"] {
+                                        margin-bottom: 0;
+                                    }
+
+                                    input[type="radio"] {
+                                        margin: 0;
+                                    }
+
+                                    .radio_option {
+                                        display: inline-block;
+                                    }
+
+                                    .help_string {
+                                        margin-left: 163px;
+                                        width: 218px;
+                                        font-family: Roboto;
+                                        font-size: 10px;
+                                        font-weight: 400;
+                                        color: #9b9b9b;
+                                        word-wrap: break-word;
+                                    }
+                                }
+                            }
+                        }
+                        &.ta-playground-property-editor{
+                            width: 360px;
+                            min-width: 360px;
+                            border-left: 1px solid #bfbfbf;
+                            .ta-playground-property-editor-body {
+                                overflow: auto;
+                            }
+                            .ta-playground-component-label {
+                                margin-bottom: 11px;
+                                font-family: Roboto;
+                                font-size: 18px;
+                                font-weight: 400;
+                                color: #3c444d;
+                            }
+
+                            label {
+                                height: 14px;
+                                font-weight: 400;
+                                color: #4a4a4a;
+                                margin-bottom: 8px;
+                            }
+
+                            input[type="text"], input[type="password"], textarea {
+                                width: 161px;
+                            }
+
+                            input[type="checkbox"] {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 4px;
+                                background-image: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+                                box-shadow: inset 0 1px 0 0 rgba(253, 253, 253, 0.5);
+                                border: solid 1px #bfbfbf;
+                                margin: 0;
+                            }
+
+                            .help_string_note {
+                                font-size: 10px;
+                                font-weight: 400;
+                                color: #9b9b9b;
+                                margin-top: -8px;
+                                margin-bottom: 8px;
+                            }
+
+                            .checkbox_block {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-bottom: 8px;
+                            }
+
+                            .option_titles {
+                                font-size: 10px;
+                                font-weight: 400;
+                                color: #3c444d;
+                            }
+
+                            .input_row_field.radio {
+                                width: 55px;
+                            }
+
+                            .input_row_field.iconx {
+                                width: 12px;
+                            }
+
+                            img {
+                                height: 12px;
+                                width: 12px;
+                                margin-bottom: 8px;
+                            }
+
+                            button {
+                                margin-bottom: 17px;
+                                padding-left: 8px;
+                                padding-right: 8px;
+                            }
+                        }
+                        .ta-playground-panel-body {
+                            height: calc(100% - 70px);
+                            padding: 20px;
+                        }
+                        .ta-playground-panel-title {
+                            background-image: linear-gradient(to bottom, rgb(247, 247, 247), #eee);
+                            background-repeat: repeat-x;
+                            background-color: $tabuilderBackgroudGray;
+                            border: 1px solid #bfbfbf;
+                            color: $tabuilderFontBlack;
+                            box-shadow: inset 0px 1px 0 rgb(252, 252, 252);
+                            text-shadow: none;
+                            border-left: none;
+                            border-right: none;
+                            padding: 7px 0px 0px 20px;
+                            height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

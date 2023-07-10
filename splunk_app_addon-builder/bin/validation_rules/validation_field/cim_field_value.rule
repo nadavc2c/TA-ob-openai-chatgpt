@@ -1,0 +1,40 @@
+{
+    "class": "validation_field.validator_rule_value.RuleFieldValue",
+    "id": "field_extract_validator.field_value",
+    "name": "Validate field values",
+    "category": "data_model_mapping_validation",
+    "remedy_suggestion": "Field value solution.",
+    "description": "Validate the field values.",
+    "priority": 5,
+    "validation_results": {
+        "4000": {
+            "description": "The field \"${name}\"=\"${value}\" of event type \"${eventtype}\" has tags \"${tag}\" which mapped to app \"${app}\" but it is not a number.",
+            "solution": "Use EVAL or LOOKUP to convert the value to int.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "4001": {
+            "description": "The field \"${name}\"=\"${value}\" of event type \"${eventtype}\" has tags \"${tag}\" which mapped to app \"${app}\" but it does not match \"${regex}\".",
+            "solution": "Use EVAL or LOOKUP to make the field compatible with current data model(s).",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "4002": {
+            "description": "Validate the \"${field}\" field of the \"${eventtype}\" event type for app \"${app}\".",
+            "severity": "Pass",
+            "status": "Pass"
+        },
+        "4004": {
+            "description": "Cannot get any events for eventtype \"${eventtype}\"",
+            "solution": "Upload samples or create an input to index some events before validation",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "4005": {
+            "description": "The field \"${name}\"=\"${value}\" of event type \"${eventtype}\" has tags \"${tag}\" which mapped to app \"${app}\" but it is not a boolean.",
+            "solution": "Use EVAL or LOOKUP to convert the value to 0, 1, true or false.",
+            "severity": "Fatal",
+            "status": "Fail"
+        }
+    }
+}

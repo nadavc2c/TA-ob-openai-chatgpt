@@ -1,0 +1,8 @@
+<tbody>
+    <% _(events).each(function(event){ %>
+        <tr>
+            <td><i class='icon <%- event.icon %>'></i></td>
+            <td><span class='event-content'><%= event.content %></span></td>
+        </tr>
+    <% }) %>
+</tbody>

@@ -1,0 +1,19 @@
+<div class="ta-playground-component-label">
+    <span class="required" style="
+        <% if (required) { %>
+            visibility: visible;
+        <% } else { %>
+            visibility: hidden;
+        <% } %>
+    ">*</span>
+    <%- label %>
+    <% if (internal_name) {%>
+        (<%- internal_name %>)
+    <% } %>
+</div>
+<div class="ta-playground-component-content">
+    <input type="checkbox" name="<%- name %>" value="" <% if (default_value) { %>checked<% } %> />
+</div>
+<% if (help_string) { %>
+    <div class='help_string'><%- help_string %></div>
+<% } %>

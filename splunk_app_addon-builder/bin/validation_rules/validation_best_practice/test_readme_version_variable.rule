@@ -1,0 +1,24 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Create a README.txt file for the add-on.",
+  "description": "Check if a README.txt file exists under the add-on top directory.",
+  "case_name": "test_readme_version_variable",
+  "id": "best_practice_validator.readme_version_variable",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "README version variable",
+  "disabled": true,
+  "validation_results" : {
+    "8048": {
+        "description": "The README.txt file does not contain an add-on version variable.",
+        "solution": "Add the add-on version variable to the README.txt file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8049": {
+        "description": "The README.txt file contains add-on version variables.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

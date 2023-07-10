@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: uccrestbuilder
+Version: 3.0.2
+Summary: The REST builder tool for Universal Configuration Console
+Home-page: https://git.splunk.com/scm/soln/ta-ui-framework.git
+Author: Splunk, Inc.
+Author-email: Shanghai-TA-dev@splunk.com
+License: http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Dist: solnlib (>=1.0.16-dev)
+Requires-Dist: splunktaucclib (>=3.0.0)
+Requires-Dist: splunk-sdk (>=1.6.0)
+
+UNKNOWN
+

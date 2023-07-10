@@ -1,0 +1,19 @@
+<% has_inputs = (len(ucc_meta['pages'].get('inputs', {})) > 0) %>\
+<% has_configuration = (len(ucc_meta['pages'].get('configuration', {})) > 0) %>\
+<nav search_view="search" color="${theme_color}">
+% if has_inputs:
+<view name="inputs" default="true" />
+% if has_configuration:
+<view name="configuration"/>
+% endif
+% else:
+% if has_configuration:
+<view name="configuration" default="true"/>
+% endif
+% endif
+% if has_inputs or has_configuration:
+<view name="search" label="Search"/>
+% else:
+<view name="search" label="Search" default="true"/>
+% endif
+</nav>

@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Move the definition from global scope to a stanza.",
+  "description": "Conf files should not contain a global definition, which might affect other add-ons.",
+  "case_name": "test_no_global_default_definition_in_conf",
+  "id": "best_practice_validator.no_global_default_definition_in_conf",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Global default definitions",
+  "validation_results" : {
+    "8066": {
+        "description": "${fname} contains a global definition, which might affect other add-ons.",
+        "solution": "Move the definition in ${fname} from global scope to a stanza.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8067": {
+        "description": "${fname} contains a [default] stanza, which might affect other add-ons.",
+        "solution": "Remove the [default] stanza.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8068": {
+        "description": "Configuration files do not define global scope.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

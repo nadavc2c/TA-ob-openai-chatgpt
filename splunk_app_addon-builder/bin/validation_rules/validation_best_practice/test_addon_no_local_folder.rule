@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove the the \"local\" folder.",
+  "case_name": "test_addon_no_local_folder",
+  "id": "best_practice_validator.addon_no_local_folder",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No local folder",
+  "disabled": true,
+  "validation_results" : {
+    "8002": {
+        "description": "The add-on package contains a \"local\" folder.",
+        "solution": "Move the files to the \"default\" folder and delete the \"local\" folder.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8003": {
+        "description": "None",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"_confstr": "",
+    "punct": "=_=_==_=_==_=_=", 
+	"host": 'xchen-mbpr.sv.splunk.com', 
+	u'source': '/Users/xiaoqin/Downloads/modular_alert/html/newevents', 
+	u'_time': u'1470191876', 
+	u'_raw': u's=jlioooo10 k=358 m=there\ns=jlioooo10 k=357 m=here\ns=jlioooo10 k=358 m=there', 
+	"splunk_server':
+			u'xchen-mbpr.sv.splunk.com', u'sourcetype': u'newevents',
+		u'timestamp': u'none', u'_serial': u'1', u's': u'jlioooo10',
+		u'_sourcetype': u'newevents', u'index': u'main', u'w': u'', u'_kv':
+			u'1', u'_indextime': u'1470191876'}

@@ -1,0 +1,61 @@
+{
+    "class": "validation_app_cert.validator_rule_app_cert.RuleAppCert",
+    "id": "app_cert_validator.app_cert",
+    "name": "Validate app certification",
+    "category": "app_cert_validation",
+    "remedy_suggestion": "App certification solution.",
+    "description": "Validate app certification.",
+    "priority": 1,
+    "validation_results": {
+        "7000": {
+            "description": "${desc}",
+            "sub_category": "${sub_category}",
+            "severity": "Pass",
+            "status": "Pass"
+        },
+        "7001": {
+            "description": "${desc}",
+            "sub_category": "${sub_category}",
+            "solution": "${solution}",
+            "severity": "Internal",
+            "status": "Fail",
+            "ext_data": {"is_visible": false, "reason": "App inspect internal error"}
+        },
+        "7002": {
+            "description": "${desc}",
+            "sub_category": "${sub_category}",
+            "solution": "${solution}",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "7003": {
+            "description": "App Certification validation stopped due to an error.",
+            "sub_category": "Configuration or Network error",
+            "solution": "The Add-on Builder could not connect to the App Certification server. Check your proxy settings and try again.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "7004": {
+            "description": "${desc}.",
+            "sub_category": "${sub_category}",
+            "solution": "There are multiple errors for this check. Please check \"messages\" for details.",
+            "messages": "${messages}",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "7005": {
+            "description": "App Certification validation timeout.",
+            "sub_category": "Request not response",
+            "solution": "There is a problem with the App Certification server. Please wait a few minutes then try again.",
+            "severity": "Fatal",
+            "status": "Fail"
+        },
+        "7006": {
+            "description": "App Certification validation aborted due to unknown errors.",
+            "sub_category": "Unknown errors",
+            "solution": "Please check the internal logs for more details.",
+            "severity": "Fatal",
+            "status": "Fail"
+        }
+    }
+}

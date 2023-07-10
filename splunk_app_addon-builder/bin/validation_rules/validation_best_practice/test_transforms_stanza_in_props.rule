@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Add the stanza to the props.conf or remove it from transforms.conf if it is not needed.",
+  "description": "All stanzas that are defined in transforms.conf should also be used in props.conf or by a modular regular expression. All stanzas that are used by props.conf should be defined in transforms.conf.",
+  "case_name": "test_transforms_stanza_in_props",
+  "id": "best_practice_validator.transforms_stanza_in_props",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Stanzas in props and transforms",
+  "validation_results" : {
+    "8061": {
+        "description": "${key} is defined in the transforms.conf file but is not used in the props.conf file or any modular regular expression.",
+        "solution": "Add ${key} to props.conf, or remove ${key} from transforms.conf if it is not needed.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8062": {
+        "description": "${key} is defined in the props.conf file but is not defined in any transforms.conf file stanza.",
+        "solution": "Add ${key} to transforms.conf, or remove ${key} from the props.conf file if it is not needed.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8063": {
+        "description": "Definitions in the props.conf and transforms.conf files match.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

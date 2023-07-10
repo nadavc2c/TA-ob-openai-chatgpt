@@ -1,0 +1,82 @@
+$bannerHeight: 18px;
+
+.root{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $bannerHeight;
+    background-color: #d6563c;
+    text-align: center;
+    line-height: $bannerHeight;
+}
+.rootShowAnimation{
+    animation: show 0.5s ease-out;
+}
+@keyframes show{
+    0% {
+        top: -$bannerHeight;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.rootClosed{
+    composes: root;
+    top: -$bannerHeight;
+}
+
+.rootHideAnimation{
+    animation: hide 0.5s ease-out;
+}
+@keyframes hide{
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -$bannerHeight;
+    }
+}
+
+.noDisplay {
+    display: none;
+}
+
+.icon{
+    color: #fff;
+    padding-right: 5px;
+    vertical-align: super;
+}
+.iconClose{
+    position: relative;
+    top: -2px;
+}
+.msg{
+    color: #fff;
+    display: inline-block;
+    max-width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    margin: 1px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    color: #ddd;
+    cursor: pointer;
+}
+.close:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}

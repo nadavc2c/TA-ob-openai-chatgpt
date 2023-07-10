@@ -1,0 +1,24 @@
+{
+    "category": "best_practice_validation",
+    "remedy_suggestion": "Put a default.meta file in the \"metadata\" folder.",
+    "description": "Check for a default.meta file.",
+    "case_name": "test_default_meta_exist",
+    "id": "best_practice_validator.default_meta_exist",
+    "class": "validation_best_practice.best_practice_rule.MatinalRule",
+    "name": "Default.meta exists",
+    "disabled": true,
+    "validation_results": {
+        "8078": {
+            "description": "The default.meta file does not exist.",
+            "solution": "Add a default.meta file to the \"metadata\" folder.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "8079": {
+            "description": "The default.meta file exists.",
+            "solution": "",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove or rename duplicate keys.",
+  "description": "Props.conf and transforms.conf should not contain duplicate keys in stanzas.",
+  "case_name": "test_no_duplicate_key_in_stanza",
+  "id": "best_practice_validator.no_duplicate_key_in_stanza",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No duplicate keys in stanzas",
+  "disabled": true,
+  "validation_results" : {
+    "8069": {
+        "description": "A duplicate key ${key} was found in the [${stanza}] stanza of ${file}.",
+        "solution": "Remove or rename the duplicate ${key} key from [${stanza}] in ${file}.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8070": {
+        "description": "The props.conf and transforms.conf files do not contain duplicate keys.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

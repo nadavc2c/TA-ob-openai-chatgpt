@@ -1,0 +1,37 @@
+.content{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cimMappingPaginator{
+    float:right;
+    padding: 10px;
+}
+
+.loadingStyle{
+    width: 100%;
+    position: absolute;
+    min-height: 348px;
+    background-color: rgba(255,255,255,1);
+    padding-left: 43%;
+    padding-top: 16%;
+    z-index: 2;
+    font-size: large;
+    font-weight: 200;
+}
+
+.actionButton{
+    border-right: 1px solid #1e93c6;
+    margin-right: 4px;
+    padding-right: 5px;
+}
+.createCimButton{
+    float: right;
+    margin: 11px 10px;
+}
+.sourceName{
+    color:#1e93c6;
+    display: inline-block;
+    margin: 0 2px;
+}

@@ -1,0 +1,21 @@
+.root{
+    height: 32px;
+    float: right;
+    margin-top: 20px
+}
+
+.save{
+    float: right;
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.cancel{
+    float: right;
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 20px;
+}

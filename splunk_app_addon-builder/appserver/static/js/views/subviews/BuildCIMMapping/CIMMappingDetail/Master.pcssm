@@ -1,0 +1,25 @@
+.root {
+    width: 100%;
+    height: 100%;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.breadCrumbHeadWithDescription{
+    width: 100%;
+    box-sizing: border-box;
+    padding:20px;
+    background: #f5f5f5;
+    font-family: Roboto;
+    color: #3c444d;
+    height: 120px;
+}
+
+.breadCrumbBodyWithDescription{
+    width: 100%;
+    height: calc(100% - 120px);
+}

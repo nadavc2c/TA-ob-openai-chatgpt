@@ -1,0 +1,29 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Use an underscore (_) instead.",
+  "description": "Event type names should not contain a colon (:) to follow best practices for naming conventions.",
+  "case_name": "test_eventtypes_no_colon",
+  "id": "best_practice_validator.eventtypes_no_colon",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No colons in event type names",
+  "validation_results" : {
+    "8021": {
+        "description": "A colon (:) was found in an event type ${stanza}, which does not follow best practices for naming conventions.",
+        "solution": "Use an underscore (_) in ${stanza} instead of a colon (:).",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8096": {
+        "description": "Colons (:) were found in event types ${stanzas}, which does not follow best practices for naming conventions.",
+        "solution": "Use underscores (_) in event types instead of colons (:).",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8022": {
+        "description": "Event type names do not contain a colon (:).",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

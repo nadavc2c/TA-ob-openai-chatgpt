@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Add \"start_by_shell = false\" to the stanza.",
+  "description": "Inputs.conf should have a \"start_by_shell = false\" definition. If missing for modular or scripted inputs, an orphan process issue can occur on the Ubuntu platform.",
+  "case_name": "test_inputs_start_by_shell_false",
+  "id": "best_practice_validator.inputs_start_by_shell_false",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "start_by_shell setting",
+  "validation_results": {
+      "8080": {
+          "description": "The [${stanza}] stanza in the inputs.conf file does not contain \"start_by_shell=false\". For modular inputs and scripted inputs, this might cause an orphan process issue on the Ubuntu platform.",
+          "solution": "Add \"start_by_shell=false\" to the [${stanza}] stanza.",
+          "severity": "Warning",
+          "status": "Fail"
+      },
+      "8081": {
+          "description": "The \"start_by_shell=false\" setting is specified for modular and scripted inputs.",
+          "solution": "",
+          "severity": "Pass",
+          "status": "Pass"
+      }
+  }
+}

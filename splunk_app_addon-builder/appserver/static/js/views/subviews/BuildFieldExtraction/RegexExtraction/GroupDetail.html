@@ -1,0 +1,36 @@
+<div class="triangle-indicator" style="display:none;"></div>
+<div class="regex-extraction-group-detail">
+    <div class="pattern-container segment-container">
+        <span class="regex-extraction-label">
+            <%- _.t("Pattern") + ":" %>
+        </span>
+        <span class="regex-extraction-pattern">
+            <%= expression %>
+        </span>
+    </div>
+    <label class="checkbox ckb-show-regex">
+        <a class="btn">
+            <i class="icon-check" style="display:none;"></i>
+        </a>
+        Show the regular expression
+    </label>
+    <div class="regex-input-container segment-container" style="display:none;">
+        <textarea type="text" class="regex-input" rows="3"><%- regex %></textarea>
+        <a class="btn btn-primary btn-apply">Apply</a>
+        <span class="ta-regex-error-msg"></span>
+    </div>
+    <div class="fields-container segment-container">
+        <span class="regex-extraction-label">
+            <%- _.t("Fields") + ":" %>
+        </span>
+        <div class="fields">
+        </div>
+    </div>
+    <div class="events-container segment-container">
+        <span class="regex-extraction-label">
+            <%- _.t("Events") + ":" %>
+        </span>
+        <div class="event-table">
+        </div>
+    </div>
+</div>

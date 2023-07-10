@@ -1,0 +1,15 @@
+<% _(events).each(function(event){ %>
+    <tr>
+        <% if (event.length >= header.length) { %>
+            <% event = event.slice(0, header.length); %>
+        <% } else { %>
+            <% event = event.slice(); %>
+            <% for (var i = event.length; i < header.length; ++i) { %>
+                <% event.push(''); %>
+            <% } %>
+        <% } %>
+        <% _(event).each(function(cell){ %>
+            <td><%- cell %></td>
+        <% }) %>
+    </tr>
+<% }) %>

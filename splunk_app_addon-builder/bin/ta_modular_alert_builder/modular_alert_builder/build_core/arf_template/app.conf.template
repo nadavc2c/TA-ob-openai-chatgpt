@@ -1,0 +1,18 @@
+<%page args="mod_alerts, global_settings"/>
+<%
+    setup_enabled = True
+    if not global_settings:
+        setup_enabled = False
+    elif not global_settings.get("settings"):
+        setup_enabled = False
+    elif len(global_settings["settings"]) == 1 and \
+            "customized_settings" in global_settings["settings"].keys() and \
+            len(global_settings["settings"]["customized_settings"]) <= 0:
+        setup_enabled = False
+%>
+[install]
+%if setup_enabled:
+is_configured = False
+%else:
+is_configured = True
+%endif

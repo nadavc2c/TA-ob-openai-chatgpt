@@ -1,0 +1,179 @@
+.ta-test-code-nav-field {
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: 5px;
+}
+.ta-output-area-view {
+    width: 100%;
+    height:100%;
+    .ta-code-status {
+        color: #000;
+        &.ta-code-status-success {
+            color: $tabuilderSuccessColor;
+        }
+        &.ta-code-status-error {
+            color: $tabuilderErrorColor;
+        }
+    }
+    .ta-output-status-container {
+        width: 100%;
+        height: 30px;
+        .ta-nav-field {
+            display: inline-block;
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+        .ta-output-status span.ta-code-status{
+            margin-left: 5px;
+            line-height: 14px;
+            height: 14px;
+            position: relative;
+            padding-left: 18px;
+            i {
+                font-size: 18px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+    .ta-output-area-wrapper {
+        width: 100%;
+        height: calc(100% - 30px);
+        /*border: 1px solid #ddd;
+        &.ta-status-success {
+            border: 1px solid $tabuilderSuccessColor
+        }
+        &.ta-status-error {
+            border: 1px solid $tabuilderErrorColor
+        }*/
+    }
+    .ta-output-text-wrapper {
+        width: 100%;
+        height: calc(100% - 30px);
+        overflow: auto;
+        word-wrap: break-word;
+        .icon-warning-sign {
+            color: $tabuilderErrorColor;
+            margin-right: 5px;
+        }
+
+        .icon-warning {
+            color: #ffd162;
+            margin-right: 5px;
+        }
+
+        .icon-info-circle {
+            color: #9b9b9b;
+            margin-right: 5px;
+        }
+    }
+}
+.ta-ace-wrapper {
+    width: 100%;
+    height:100%;
+    .ta-code-editor-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ta-test-code-arrows {
+    display: inline-block;
+    padding-top: 5px;
+    border-right: 1px solid #bfbfbf;
+    border-radius: 4px;
+    height: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    .ta-test-code-arrow {
+        display: inline-block;
+
+        .icon-arrow-left, .icon-arrow-right {
+            color: #4A4A4A;
+        }
+
+    }
+}
+.ta-code-test-container {
+    width: 100%;
+    height: calc(100% - 80px);
+    position: relative;
+    display: flex;
+    flex: row;
+    .ta-code-test-sub-container {
+        /*position: absolute;
+        top: 0;*/
+        height: 100%;
+    }
+    .ta-parameters-container {
+        width: 40%;
+        min-width: 500px;
+    }
+    .ta-alert-parameters-container {
+        width: 40%;
+        min-width: 500px;
+        .nav.nav-tabs {
+            margin-bottom: 0;
+        }
+        input, textarea, .uneditable-input {
+            width: 270px;
+        }
+
+        .select2-container{
+            width: 303px;
+        }
+        .editable-table {
+            input, textarea, .uneditable-input {
+                width: 220px;
+            }
+        }
+        .ta-parameters-container-header {
+            padding-bottom: 10px;
+            .ta-parameters-container-logo {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            .ta-parameters-container-name {
+                display: inline-block;
+                margin-left: 10px;
+                width:85%;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                border:0;
+                cursor: default !important;
+            }
+        }
+        .tab-content {
+            height: calc(100% - 26px);
+            /*padding: 20px 0;*/
+            overflow-y: auto;
+            .tab-pane > .ta-shared-customized-settings {
+                border-top: 1px solid #ccc;
+                padding: 20px;
+            }
+            .form-indent-section .control-group:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .ta-code-editor-container {
+        flex: 1;
+        .nav.nav-tabs {
+            margin-bottom: 0;
+        }
+        .ta-code-editor-view {
+            height: calc(100% - 26px);
+        }
+    }
+    .ta-test-output-container {
+    }
+}
+.ta-test-code-nav-field {
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: 5px;
+}

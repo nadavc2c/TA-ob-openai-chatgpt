@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Add a \"docs_section_override\" setting.",
+  "case_name": "test_app_docs_section_override",
+  "id": "best_practice_validator.app_docs_section_override",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "docs_section_override setting",
+  "disabled": true,
+  "validation_results" : {
+      "8006": {
+          "description": "The app.conf file does not contain \"docs_section_override = AddOns:released\".",
+          "solution": "Add a \"docs_section_override\" setting to the app.conf file.",
+          "severity": "Warning",
+          "status": "Fail"
+      },
+      "8007": {
+          "description": "None",
+          "solution": "",
+          "severity": "Pass",
+          "status": "Pass"
+      }
+  }
+}

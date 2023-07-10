@@ -1,0 +1,22 @@
+{
+  "category": "best_practice_validation",
+  "case_name": "test_app_package_id",
+  "id": "best_practice_validator.app_package_id",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Package ID",
+  "disabled": true,
+  "validation_results" : {
+    "8008": {
+        "description": "The value of the \"id\" field in the app.conf file is not consistent with the add-on name \"${app_name}\".",
+        "solution": "Change the \"id\" field value to the add-on name.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8009": {
+        "description": "None",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

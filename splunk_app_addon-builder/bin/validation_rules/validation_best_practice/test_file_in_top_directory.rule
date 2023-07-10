@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove unnecessary files or put them inside a folder.",
+  "description": "The top directory of the add-on should not contain unnecessary files.",
+  "case_name": "test_file_in_top_directory",
+  "id": "best_practice_validator.file_in_top_directory",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No unnecessary files",
+  "validation_results" : {
+    "8015": {
+        "description": "Unnecessary files \"${unneeded_files}\" were found in the top directory of the add-on.",
+        "solution": "Remove the \"${unneeded_files}\" files if they are unnecessary, or move them into a folder.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8016": {
+        "description": "The top directory of the add-on contains only necessary files.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

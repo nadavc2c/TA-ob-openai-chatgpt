@@ -1,0 +1,58 @@
+<div class="ta-playground-component-label">Radio Buttons</div>
+<div class="">
+    <label>Display label</label>
+    <input type="text" name="label" value="<%- label %>" />
+</div>
+<div class="">
+    <label>Internal name</label>
+    <input type="text" name="name" value="<%- name %>" />
+</div>
+<div class="">
+    <label>Radio button values</label>
+    <div class="">
+        <div class="option_titles">
+            <div class="input_row_field">
+                <span>Display value</span>
+            </div>
+
+            <div class="input_row_field">
+                <span>Internal value</span>
+            </div>
+
+            <div class="input_row_field">
+                <span>Default</span>
+            </div>
+        </div>
+        <div class="radio_option_values option_values">
+            <div class="radio_option_value option_value">
+                <div class="input_row_field">
+                    <input type="text" name="option_label"/>
+                </div>
+                <div class="input_row_field">
+                    <input type="text" name="option_value"/>
+                </div>
+                <div class="input_row_field radio">
+                    <input type="radio" name="option_default_value"/>
+                </div>
+                <div class="input_row_field iconx">
+                    <a href="#"><img class="iconx" src=<%- iconx %>></img></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn" id="add_new_option">New Option</button>
+    </div>
+</div>
+<div class="">
+    <label>Help text</label>
+    <textarea name="help_string" rows="4" placeholder="Optional. Max 200 Characters"><%- help_string %></textarea>
+</div>
+<div class="required_field">
+    <div class="checkbox_block">
+        <input type="checkbox" name="required" <% if (required) { %>checked<% } %> />
+    </div>
+    <div class="checkbox_block">
+        Required
+    </div>
+</div>

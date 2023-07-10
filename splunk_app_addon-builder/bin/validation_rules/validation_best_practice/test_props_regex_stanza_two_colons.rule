@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Fix the incorrect regular expression in the stanza header.",
+  "description": "Stanza headers in props.conf that use regular expressions should use double colons (::).",
+  "case_name": "test_props_regex_stanza_two_colons",
+  "id": "best_practice_validator.props_regex_stanza_two_colons",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Double colons for regex stanzas",
+  "validation_results" : {
+    "8036": {
+        "description": "The [${stanza}] stanza header in the props.conf file uses a regular expression but does not contain a double colon (::).",
+        "solution": "In props.conf, fix the incorrect regular expression for the [${stanza}] stanza header by using a double colon (::).",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8037": {
+        "description": "Regular expressions in props.conf stanza headers contain a double colon (::).",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

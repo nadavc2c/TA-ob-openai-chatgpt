@@ -1,0 +1,5 @@
+% for eventtype in eventtypes:
+[${eventtype['eventtype']}]
+search = sourcetype=${eventtype['sourcetype']} ${eventtype['searchstr']} 
+
+% endfor

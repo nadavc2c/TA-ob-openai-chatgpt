@@ -1,0 +1,12 @@
+.url {
+    width: calc(100% - 120px);
+    float: left;
+}
+.method {
+    float: right;
+    width: 100px;
+}
+.control {
+    float: left;
+    min-width:50%;
+}

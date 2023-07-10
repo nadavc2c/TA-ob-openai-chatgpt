@@ -1,0 +1,5 @@
+.root{
+    width: 360px;
+    min-width: 360px;
+    border-left: 1px solid #bfbfbf;
+}

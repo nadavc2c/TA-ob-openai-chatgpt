@@ -1,0 +1,22 @@
+{
+  "category": "best_practice_validation",
+  "case_name": "test_build_appname",
+  "id": "best_practice_validator.build_appname",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Add-on name",
+  "disabled": true,
+  "validation_results" : {
+    "8010": {
+        "description": "The name \"${app_name}\" does not follow best practices for naming conventions.",
+        "solution": "Change the add-on name to Splunk_TA_your-addon-name.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8011": {
+        "description": "None",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

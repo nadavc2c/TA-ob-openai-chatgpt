@@ -1,0 +1,22 @@
+{
+  "category": "best_practice_validation",
+  "case_name": "test_addon_no_local_in_metadata_folder",
+  "id": "best_practice_validator.addon_no_local_in_metadata_folder",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No local.meta file",
+  "disabled": true,
+  "validation_results" : {
+    "8004": {
+        "description": "The \"metadata\" folder contains a local.meta file.",
+        "solution": "Merge the contents of the file with the default.meta file, then delete local.meta.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8005": {
+        "description": "None",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

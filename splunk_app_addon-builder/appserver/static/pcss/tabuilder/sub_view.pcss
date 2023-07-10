@@ -1,0 +1,288 @@
+$taBuilderMainFlowMinWidth: 1280px;
+table tr {
+    height: 25px;
+}
+
+#addonContainer.ta-sub-view-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    min-width: 1024px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:white;
+    .warning-view {
+        border: 1px solid #999;
+        border-radius: 8px;
+        box-shadow: none;
+        top: 100px;
+    }
+}
+#splunk-header {
+    min-width: $taBuilderMainFlowMinWidth;
+}
+.ta-sub-view {
+    position: absolute;
+    height: calc(100% - 70px);
+    min-width: $taBuilderMainFlowMinWidth;
+    width: 100%;
+    margin-top: 70px;
+    &.ta-sub-view-without-nav {
+        height: calc(100% - 25px);
+        margin-top: 25px;
+    }
+    a.ta-sub-view-return-link {
+        color: #1e93c6;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .ta-sub-view-connector {
+        color: #3c444d;
+        font-size: 12px;
+    }
+    .ta-sub-view-subtitle {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: bold;
+        color: #3c444d;
+    }
+    .ta-sub-view-btn {
+        margin-top: 20px;
+        margin-right: 20px;
+        height: 32px;
+        width: 100px;
+        font-size: 14px;
+    }
+    .ta-error-msg-banner {
+        border: 2px solid $tabuilderErrorColor;
+        color: $tabuilderErrorColor;
+        padding: 5px;
+        margin: 10px;
+    }
+    /* Override wizard styles start */
+    .ta-step-wizard {
+        background-color: $tabuilderBackgroudGray !important;
+        border-bottom: 1px solid #bbb;
+        margin-bottom: -1px;
+        .step-wizard {
+            .wizard-label {
+                width: 200px;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 700;
+                color: #3c444d;
+                line-height: 61px;
+                margin-left: 20px;
+            }
+            .step-container.active.completed .connector.left > div,
+            .step-container.completed .connector > div {
+                background-color: $splunkGreen;
+            }
+            .step-container.active .connector.right > div {
+                background-color: #bbb;
+            }
+            .step-container.active .circle {
+                background-color: $splunkGreen !important;
+                border-color: $splunkGreen !important;
+            }
+            .step-container.last .connector.right > div {
+                visibility: hidden;
+            }
+            .step-wizard .step-container.last .circle {
+                width: 18px;
+                height: 18px;
+            }
+            .step-container.active .step-label,
+            .step-container.completed .step-label {
+                opacity: 1 !important;
+                color: $splunkGreen !important;
+            }
+            .btn-exit {
+                margin-left: 3px;
+            }
+            .text-spin {
+                height: 63px;
+                line-height: 63px;
+                display: inline-block;
+                margin-left: 10px;
+                position: relative;
+            }
+        }
+    }
+    /* Override wizard styles end */
+    .ta-step-wizard-body{
+        width: 100%;
+        height: calc(100% - 80px);
+        overflow: initial;
+    }
+}
+.ta-nav-bar {
+    position: relative;
+    overflow: visible;
+    height: 45px;
+    min-width: $taBuilderMainFlowMinWidth;
+    background-color: #3c444d;
+    .ta-nav-bar-inner {
+        &::before,
+        &::after {
+            display: table;
+            line-height: 0;
+            content: "";
+        }
+        &::after {
+            clear: both;
+        }
+        .ta-nav {
+            position: relative;
+            left: 0;
+            display: block;
+            float: left;
+            margin: 0;
+            list-style: none;
+            &.pull-right {
+              float: right;
+              margin-right: 0;
+            }
+            & > li {
+                float: left;
+                &:first-child {
+                    position: relative;
+                    &::after {
+                        right: 0;
+                        top: 13px;
+                        width: 1px;
+                        height: 20px;
+                        background: #b2b9bf;
+                        content: "";
+                        position: absolute;
+                    }
+                }
+                & > a {
+                    float: none;
+                    padding: 10px 15px;
+                    color: #b2b9bf;
+                    font-weight: 400;
+                    text-decoration: none;
+                    display: inline-block;
+                    height: 25px;
+                    line-height: 25px;
+                    user-select: none;
+                    font-size: 14px;
+                    &:focus,
+                    &:hover {
+                        /*background-color: color(white a(10%));*/
+                        /*font-weight: 700;*/
+                        color: $tabuilderWhite;
+                        background-color: transparent;
+                    }
+                }
+                &:first-child > a {
+                    max-width: 100px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-left: 20px;
+                }
+                &.active {
+                    & > a{
+                        /*background-color: color(black a(10%));*/
+                        /*font-weight: 700;*/
+                        color: $tabuilderWhite;
+                        &:focus,
+                        &:hover {
+                            /*background-color: color(white a(10%));*/
+                            /*font-weight: 700;*/
+                            background-color: transparent;
+                            color: $tabuilderWhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .name-banner-container{
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 235px;
+        &:focus,
+        &:hover {
+            background-color: color(white a(10%));
+        }
+        .icon {
+            width: 36px;
+            height: 36px;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+            left: 5px;
+            display: inline-block;
+            position: absolute;
+            background-image: url('../img/icon/icon.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 3px 3px;
+        }
+        .name-banner {
+            display: block;
+            text-decoration: none;
+            color: $tabuilderWhite;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 20px;
+            margin-top: 10px;
+            position: absolute;
+            right: 0;
+            user-select: none;
+            font-weight: 700;
+            line-height: 25px;
+            height: 25px;
+            &:focus {
+                background-color: transparent;
+                box-shadow: 0 0 0;
+            }
+        }
+    }
+}
+.ta-input-action-cell {
+    a {
+        margin-right: 15px;
+        background: transparent;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 16px;
+            right: -8px;
+            background: #1e93c6;
+        }
+        &:focus {
+            box-shadow: 0 0 0;
+        }
+        &:last-child {
+            margin-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+#parse-confirm-modal {
+    .modal-body {
+        padding-top: 10px;
+    }
+    .alert {
+        display: inline-block;
+        margin-bottom: 6px;
+        padding-right: 0px;
+    }
+}

@@ -1,0 +1,162 @@
+.ta-sub-view {
+    &.ta-configuration {
+        background-color: $tabuilderWhite;
+        min-width:1024px;
+    }
+}
+
+.ta-config-table {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /*.ta-config-title {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        left: 22px;
+        width: 86px;
+        height: 21px;
+        font-family: Roboto;
+        font-size: 18px;
+        color: #3c444d;
+    }*/
+
+    .ta-config-save {
+        position: relative;
+        height: 32px;
+        /*margin-top: -20px;*/
+        margin-bottom: 2px;
+
+        .btn-primary {
+            position: absolute;
+            right: 0px;
+            height: 32px;
+            width: 150px;
+            font-size: 14px;
+        }
+        .save-success-class {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 164px;
+            text-align: right;
+            height: 14px;
+            width: 600px;
+            font-family: Roboto;
+            font-size: 12px;
+            color: #000000;
+        }
+
+    }
+
+    label.checkbox{
+        padding: 2px 2px 2px 2px;
+    }
+
+    .checkbox{
+        margin-bottom: 9px;
+        .proxy-enable-class{
+                width: 15px;
+                height: 15px;
+                border-radius: 4px;
+                margin: 0px 5px 0px 0px;
+                background-image: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+                box-shadow: inset 0 1px 0 0 rgba(253, 253, 253, 0.5);
+                border: solid 1px #bfbfbf;
+                font-family: Roboto;
+                font-size: 12px;
+                color: $tabuilderFontBlack;
+        }
+    }
+
+
+    .ta-config-input-group {
+        label {
+            left: 22px;
+            height: 14px;
+            width: 200px;
+            font-family: Roboto;
+            font-size: 12px;
+            color: #3c444d;
+        }
+        input[type="text"], input[type="password"] {
+            left: 22px;
+            width: 357px;
+            height: 24px;
+            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.07);
+            border: solid 1px #cccccc;
+            border-radius: 4px;
+            padding: 0px 10px;
+        }
+        .proxy-type-class {
+            left: 22px;
+            width: 379px;
+            height: 26px;
+            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.07);
+            border: solid 1px #cccccc;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .proxy-settings-class {
+        input[disabled], select[disabled] {
+            background-color: $tabuilderWhite;
+        }
+        margin-left: 19px;
+        &.ta-proxy-disabled {
+            .ta-config-input-group label{
+                color: #9b9b9b;
+            }
+        }
+    }
+
+    .ta-config-test {
+        position: absolute;
+        position: relative;
+        height: 32px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .btn-primary {
+            position: absolute;
+            font-size: 14px;
+            left: 2px;
+            height: 32px;
+            width: 150px;
+            background-image: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+            box-shadow: inset 0 1px 0 0 #fdfdfd;
+            border: solid 1px #bfbfbf;
+            color: $tabuilderFontBlack;
+        }
+        .test-text-class {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            left: 171px;
+            text-align: left;
+            height: 14px;
+            width: 700px;
+            font-family: Roboto;
+            font-size: 12px;
+            color: #000000;
+            .icon-box-checked {
+                margin-right: 5px;
+                font-size: 18px;
+                color: #5cc05c;
+            }
+            .icon-error {
+                margin-right: 5px;
+                font-size: 18px;
+                color: red;
+            }
+        }
+    }
+}
+#partyjs_configuration .ui-metrics-collector-toggler{
+    padding-left: 20px;
+    padding-right: 20px;
+}

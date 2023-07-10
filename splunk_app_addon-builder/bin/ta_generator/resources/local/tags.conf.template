@@ -1,0 +1,7 @@
+% for _eventtype, _tags in tags.items():
+[eventtype=${_eventtype}]
+% for _tag in _tags:
+${_tag} = enabled
+% endfor
+
+% endfor

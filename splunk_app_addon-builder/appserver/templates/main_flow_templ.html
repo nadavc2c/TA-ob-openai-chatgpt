@@ -1,0 +1,99 @@
+<%!
+# retrieve settings
+isLite = (cherrypy.config['product_type'] == 'lite' or cherrypy.config['product_type'] == 'lite_free')
+
+if cherrypy.config['product_type'] == 'hunk':
+    faviconFile = 'favicon_hunk.ico'
+elif isLite:
+    faviconFile = 'favicon_lite.ico'
+else:
+    faviconFile = 'favicon.ico'
+
+faviconFilePath = '/static/img/' + faviconFile
+
+config_qs = dict(autoload=1)
+if hasattr(cherrypy.request, 'embed') and cherrypy.request.embed:
+    config_qs['embed'] = 1
+%>\
+
+<%
+''' Page-level execution. Executed once per load '''
+minify_js = splunk.util.normalizeBoolean(cherrypy.config.get('minify_js'))
+minify_css = splunk.util.normalizeBoolean(cherrypy.config.get('minify_css'))
+
+app_name = app
+
+splk_root = "/static"
+
+app_root = "/".join([splk_root,"app",app_name])
+
+app_js_build = app_root + '/js/build'
+app_css_build = app_root + '/css'
+
+page_name = page+'_page'
+
+
+# app_css ="%s/common.css" % app_css_build
+common_css_names = []
+common_css = [ "%s/%s.css" % (app_css_build, name) for name in common_css_names ]
+
+page_css = "%s/%s-enterprise.css" % (app_css_build, page_name)
+page_js = "%s/%s.js" % (app_js_build ,page_name)
+common_js = "%s/common.js" % (app_js_build)
+
+%>\
+
+<!doctype html>
+<!--[if lt IE 7]> <html lang="${i18n.current_lang()[0]|h}" class="no-js ie  lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="${i18n.current_lang()[0]|h}" class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="${i18n.current_lang()[0]|h}" class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html lang="${i18n.current_lang()[0]|h}" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="${i18n.current_lang()[0]|h}" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>${_('Loading...')}</title>
+    <meta name="description" content="listen to your data" />
+    <meta name="author" content="Splunk Inc." />
+    <meta name="viewport" content="width=1024, initial-scale=1.0" />
+    <link rel="shortcut icon" href="${make_url(faviconFilePath)}" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="${make_url('/static/img/bookmark/apple-icon-57x57-precomposed.png')}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${make_url('/static/img/bookmark/apple-icon-72x72-precomposed.png')}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${make_url('/static/img/bookmark/apple-icon-114x114-precomposed.png')}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${make_url('/static/img/bookmark/apple-icon-144x144-precomposed.png')}" />
+    <meta name="msapplication-TileColor" content="#65a637">
+    <meta name="msapplication-TileImage" content="${make_url('/static/img/bookmark/ms-tileicon-144x144.png')}">
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../../static/js/contrib/select2-3.4.6/select2.css" />
+
+    %for _css in common_css:
+    <link rel="stylesheet" type="text/css" media="all" href="${make_url(_css)}" />
+    %endfor
+    <link rel="stylesheet" type="text/css" media="all" href="${make_url(page_css)}" />
+
+</head>
+<body s:app="${app_name}">
+    <div id="addonContainer" class='addonContainer ta-sub-view-container'></div>
+    <div id='splunk-header'></div>
+
+    <div id="delete-confirm-modal"></div>
+    <div id="parse-confirm-modal"></div>
+    <div id="import-sourcetype-modal"></div>
+    <div id="alert-modal"></div>
+
+    <!-- live to code, code to live... -->
+    <script src="${make_url('/config', _qs=config_qs)}"></script>
+    <script src="${make_url('/static/js/i18n.js')}"></script>
+    <script src="${make_url('/i18ncatalog?autoload=1')}"></script>
+    <script>
+    __splunkd_partials__ = ${json_decode(splunkd)};
+    window.__splunkjs_router_disabled__ = true;
+    </script>
+    <script src="${make_url(common_js)}"></script>
+    <script src="${make_url(page_js)}"></script>
+
+    <script type="text/javascript">
+      document.title = "Add-on Builder Main Flow | Splunk";
+    </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove or merge duplicate stanzas.",
+  "description": "Eventgen.conf should not contain duplicate stanza headers.",
+  "case_name": "test_eventgen_no_duplicated_header",
+  "id": "best_practice_validator.eventgen_no_duplicated_header",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No duplicate stanza in eventgen",
+  "validation_results" : {
+    "8017": {
+        "description": "Duplicate stanza name ${header} were found in the eventgen.conf file.",
+        "solution": "Remove or merge the duplicate stanzas.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8018": {
+        "description": "The eventgen.conf file has no duplicate stanzas.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

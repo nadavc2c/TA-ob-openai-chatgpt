@@ -1,0 +1,22 @@
+{
+  "category": "best_practice_validation",
+  "case_name": "test_readme_md_neg",
+  "id": "best_practice_validator.readme_md_neg",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No README.md",
+  "disabled": true,
+  "validation_results" : {
+    "8044": {
+        "description": "There is a README.md file in the top directory of the add-on.",
+        "solution": "Use a README.txt file instead.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8045": {
+        "description": "There is no README.md file.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

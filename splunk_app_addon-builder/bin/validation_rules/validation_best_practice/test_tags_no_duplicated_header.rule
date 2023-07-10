@@ -1,0 +1,23 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove or merge duplicate stanzas",
+  "description": "Tags.conf should not contain duplicate stanza headers.",
+  "case_name": "test_tags_no_duplicated_header",
+  "id": "best_practice_validator.tags_no_duplicated_header",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No duplicate headers in tags",
+  "validation_results" : {
+    "8055": {
+        "description": "A duplicate stanza header ${stanza} was found in the tags.conf file.",
+        "solution": "Remove or merge the duplicate ${stanza} stanza header.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8056": {
+        "description": "The tags.conf file does not have duplicate stanzas.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.tableMain{
+    min-width:300px;
+}
+.tableRow{
+    text-align: left;
+    border: none;
+    border-bottom: dotted 1px #bfbfbf;
+}
+.tableCell{
+    padding-left:10px;
+}
+.tableHeader{
+    padding-left:10px;
+}
+.tableTitle{
+    padding: 5px;
+    border: none;
+    border-bottom: solid 1px #bfbfbf;
+    .tableTitleContent{
+        width:150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

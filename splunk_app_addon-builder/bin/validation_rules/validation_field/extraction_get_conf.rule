@@ -1,0 +1,9 @@
+{
+  "class": "validation_field.validator_rule_base.RuleGetConf",
+  "id": "field_extract_validator.get_conf",
+  "name": "Get the conf file for field extraction",
+  "category": "field_extract_validation",
+  "remedy_suggestion": "Check the add-on configuration.",
+  "description": "Get the field extraction configuration.",
+  "priority": 1
+}

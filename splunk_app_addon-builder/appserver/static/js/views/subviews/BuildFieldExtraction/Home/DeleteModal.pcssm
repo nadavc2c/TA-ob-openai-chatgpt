@@ -1,0 +1,3 @@
+.noClose button{
+    display: none;
+}

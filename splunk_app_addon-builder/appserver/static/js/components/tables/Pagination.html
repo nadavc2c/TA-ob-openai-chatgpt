@@ -1,0 +1,9 @@
+<div class="btn-group btn-group-radio pagination-container">
+    <% _(buttons).each(function(button){ %>
+        <% if (button.active) { %>
+            <a class="btn active" data-index="<%- button.index %>" <% if (button.disabled) { %> disabled <% } %> ><%- button.text %></a>
+        <% } else { %>
+            <a class="btn" data-index="<%- button.index %>" <% if (button.disabled) { %> disabled <% } %> ><%- button.text %></a>
+        <% } %>
+    <% }) %>
+</div>

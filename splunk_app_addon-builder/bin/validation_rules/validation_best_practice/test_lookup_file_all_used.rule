@@ -1,0 +1,47 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Remove the \"lookups\" folder if the lookups are not needed.",
+  "description": "Transforms.conf should not contain empty lookup files. All lookup files should be used by transforms.conf.",
+  "case_name": "test_lookup_file_all_used",
+  "id": "best_practice_validator.lookup_file_all_used",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "No empty lookup files",
+  "validation_results" : {
+    "8026": {
+        "description": "The \"lookups\" folder is empty.",
+        "solution": "Remove the \"lookups\" folder if it is not needed.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8027": {
+        "description": "The transforms.conf file does not exist, but there are lookup files in the \"lookups\" folder.",
+        "solution": "Add the lookup file to transforms.conf or remove the lookup file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8028": {
+        "description": "The lookup file ${fname} is empty.",
+        "solution": "Add a header or content to the empty lookup file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8029": {
+        "description": "The lookup file ${fname} is not used by the transforms.conf file.",
+        "solution": "Add the lookup file ${fname} to transforms.conf or remove the lookup file.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8030": {
+        "description": "The lookup file ${fname} is used by transforms.conf, but not found in the \"lookups\" folder.",
+        "solution": "Add the lookup file ${fname}.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8031": {
+        "description": "All lookup files are used.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.modalBody{
+
+}
+.cancelButton{
+    float:left;
+}

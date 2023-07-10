@@ -1,0 +1,23 @@
+{
+    "category": "best_practice_validation",
+    "description": "check the version in readme",
+    "case_name": "test_readme_version",
+    "id": "best_practice_validator.readme_version",
+    "class": "validation_best_practice.best_practice_rule.MatinalRule",
+    "name": "README name and version info",
+    "disabled": true,
+    "validation_results": {
+        "8084": {
+            "description": "The README.txt file does not contain name and version information.",
+            "solution": "Add name and version information to the README.txt file.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "8085": {
+            "description": "The README.txt file contains name and version information.",
+            "solution": "",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

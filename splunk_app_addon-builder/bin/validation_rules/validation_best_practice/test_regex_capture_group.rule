@@ -1,0 +1,30 @@
+{
+  "category": "best_practice_validation",
+  "remedy_suggestion": "Correct the regular expression in transforms.conf.",
+  "description": "The regular expression capture groups in transforms.conf should be correct. Capture groups should not be used in field extractions.",
+  "case_name": "test_regex_capture_group",
+  "id": "best_practice_validator.regex_capture_group",
+  "class": "validation_best_practice.best_practice_rule.MatinalRule",
+  "name": "Regex capture groups",
+  "validation_results" : {
+    "8057": {
+        "description": "The ${regex} regular expression in the transforms.conf file is invalid.",
+        "solution": "Correct the ${regex} regular expression in transforms.conf.",
+        "severity": "Warning",
+        "status": "Fail"
+    },
+    "8058": {
+        "description": "The ${group} capture group is not used in the [${stanza}] stanza in the transforms.conf file.",
+        "solution": "Remove the ${group} capture group from the regular expression in the [${stanza}] stanza in transforms.conf.",
+        "severity": "Warning",
+        "status": "Fail",
+        "ext_data": {"is_visible": "false"}
+    },
+    "8060": {
+        "description": "Capture groups in the transforms.conf file are correct.",
+        "solution": "",
+        "severity": "Pass",
+        "status": "Pass"
+    }
+  }
+}

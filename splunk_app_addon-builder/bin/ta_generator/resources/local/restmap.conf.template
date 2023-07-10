@@ -1,0 +1,10 @@
+[admin:${appname}]
+match = /${appname}_input_setup
+members = ${appname}_settings
+python.version = python3
+
+[admin_external:${appname}_settings]
+handlertype = python
+handlerfile = ${app_namespace}_setup.py
+handleractions = list, edit
+python.version = python3

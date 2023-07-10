@@ -1,0 +1,8 @@
+<% import re %>
+% for datainput in datainputs:
+[${datainput['name']}://<name>]
+% for option in datainput['data_inputs_options']:
+${option['name']} = ${re.sub("([\r\n]+)", "", option.get('description', '')).strip()}
+% endfor
+
+% endfor

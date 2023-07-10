@@ -1,0 +1,31 @@
+<div class='tbStep-configure-sourcetype clearfix'>
+    <div class="tbStep-view-title">
+        <a class="ta-sub-view-return-link">
+            <%- _.t("Manage Source Types")%>
+        </a>
+        <span class="ta-sub-view-connector"> >> </span>
+        <span class="ta-sub-view-subtitle"><%- _.t("Editing") %></span>
+    </div>
+    <div class="tbStep-view-help-link">
+        <span class="help-description">
+            <%= helplink.description %>
+            <a class="external" target="_blank" href="<%- helplink.url %>">
+                <%- _.t('Learn more') %>
+            </a>
+        </span>
+    </div>
+    <div class="tbStep-view-content">
+        <div class="ta-sub-view-sourcetype-settings-panel">
+            <div class="ta-sub-view-new-sourcetype">
+                <div class="ta-label">
+                    <%- _.t("Source Type Name:") %>
+                </div>
+                <div class="ta-input-container">
+                    <%- sourcetype %>
+                </div>
+            </div>
+        </div>
+        <div class="ta-sub-view-sample-data-panel">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+#/usr/env bash
+
+tool_dir=$(dirname $0)
+cd $tool_dir
+tool_dir=$(pwd)
+
+export PYTHONPATH=$tool_dir/../../splunk_app_add_on_builder:$tool_dir/../../
+echo $PYTHONPATH
+python $tool_dir/project_migration_tool.py $*

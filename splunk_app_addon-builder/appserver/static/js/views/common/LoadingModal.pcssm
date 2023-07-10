@@ -1,0 +1,8 @@
+.loadingModal{
+    width:500px;
+    height:100px;
+    border-radius:6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

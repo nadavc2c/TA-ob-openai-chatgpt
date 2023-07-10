@@ -1,0 +1,23 @@
+{
+    "category": "best_practice_validation",
+    "description": "check_for_updates is enabled.",
+    "case_name": "test_app_check_for_updates",
+    "id": "best_practice_validator.test_app_check_for_updates",
+    "class": "validation_best_practice.best_practice_rule.MatinalRule",
+    "name": "check_for_updates is enabled",
+    "disabled": true,
+    "validation_results": {
+        "8092": {
+            "description": "check_for_updates is set to true or uses default in app.conf.",
+            "solution": "Set check_for_updates = true in app.conf.",
+            "severity": "Warning",
+            "status": "Fail"
+        },
+        "8093": {
+            "description": "check_for_updates is set to true or uses default in app.conf.",
+            "solution": "",
+            "severity": "Pass",
+            "status": "Pass"
+        }
+    }
+}

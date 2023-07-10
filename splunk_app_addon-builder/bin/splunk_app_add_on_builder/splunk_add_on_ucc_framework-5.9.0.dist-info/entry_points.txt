@@ -1,0 +1,3 @@
+[console_scripts]
+ucc-gen=splunk_add_on_ucc_framework:main
+

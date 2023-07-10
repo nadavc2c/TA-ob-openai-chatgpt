@@ -1,0 +1,16 @@
+uccrestbuilder-3.0.2.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+uccrestbuilder-3.0.2.dist-info/METADATA,sha256=Hl6hZNDNsIkyJTba5TXAtojBcaRpDgJn73pEW2bfXfc,896
+uccrestbuilder-3.0.2.dist-info/RECORD,,
+uccrestbuilder-3.0.2.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uccrestbuilder-3.0.2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+uccrestbuilder-3.0.2.dist-info/top_level.txt,sha256=RsIWLopnayRcPn2soGPKpxoksaQk1Y5Dq4-1Vbx9m3o,15
+uccrestbuilder/__init__.py,sha256=5CcFEaUlCB9xDN9i7kaFHmF8yTbObS_ucVWxkwZD6r8,1699
+uccrestbuilder/builder.py,sha256=OUj0sL_3cWAMZM8bTfmexwORlEy7X7UuaVhsrmQtvPI,3053
+uccrestbuilder/endpoint/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uccrestbuilder/endpoint/base.py,sha256=2YfEujWok99tMfn4GSZ5nzjO13nlWkhzz9EjtawqN0Y,3734
+uccrestbuilder/endpoint/datainput.py,sha256=FfF9od5ikYkazw9xjNOHrF-r3cAPSUbebkVk_TKiD4g,1648
+uccrestbuilder/endpoint/field.py,sha256=j-Sj4eX17wGtCyOcD9l_JQLc8IBZnwarjOdAtoD1llM,1017
+uccrestbuilder/endpoint/multiple_model.py,sha256=wuuaDWYvhvQP5HEKZxxcOC_p6h6oLbBFMo1GqUOB_rM,1467
+uccrestbuilder/endpoint/single_model.py,sha256=2pGMvg6o4ShoYSbUQHVwjO_0_6_Dh73ZrV6iU8fLZlw,1322
+uccrestbuilder/global_config.py,sha256=9cMzWnGJkJhstjeaqmfDmSPu_zoFxyoTqNWmR06EN4Q,11239
+uccrestbuilder/rest_conf.py,sha256=tuWr7En-mH2ozVFtULzb4EWI9Nlcn1xtBfJG1s3pcvs,2092
