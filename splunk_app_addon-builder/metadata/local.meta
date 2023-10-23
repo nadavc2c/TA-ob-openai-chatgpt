@@ -44,8 +44,3 @@ modtime = 1688489014.409138000
 [settings/app_cert]
 version = 9.0.5
 modtime = 1688489014.456148500
-
-[collections/TA-test123]
-owner = admin
-version = 9.0.5
-modtime = 1688552807.471311200

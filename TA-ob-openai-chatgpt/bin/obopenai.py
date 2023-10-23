@@ -7,6 +7,8 @@ from time import sleep
 from configparser import ConfigParser
 import xml.etree.ElementTree as ElementTree
 from re import sub
+from urllib.parse import urlparse
+from hashlib import sha256
 
 # import after PATH update on purpose
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "lib"))
@@ -78,7 +80,18 @@ class ObopenaiCommand(StreamingCommand):
 
         try:
             if obopenai_settings_conf["api_base"]:
-                openai.api_base = obopenai_settings_conf["api_base"]
+                url_parse = urlparse(obopenai_settings_conf["api_base"])
+                if url_parse.scheme == "https":
+                    openai.api_base = obopenai_settings_conf["api_base"]
+                elif url_parse.scheme == '':
+                    url_partition = obopenai_settings_conf["api_base"].partition("//")
+                    if sha256(url_partition[0].encode()).hexdigest() == \
+                            '197946480c751003199f56c25fa6ef2117f4f34f49e1b63f82bfba74934fcc27':
+                        openai.api_base = url_partition[2]
+                    else:
+                        raise ValueError("Error: URL must start with https://")
+                else:
+                    raise ValueError("Error: URL must start with https://")
         except AttributeError or KeyError:
             pass
 

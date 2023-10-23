@@ -112,7 +112,7 @@ class ObopenaiCommand(StreamingCommand):
         maxrows = self.maxrows or 5  # walrus only in 3.8
         maxrows = None if int(maxrows) == 0 else int(maxrows)
         maxtokens = int(self.maxtokens) if self.maxtokens else None
-        temperature = int(self.temperature) if self.temperature else None
+        temperature = float(self.temperature) if self.temperature else None
         system_role = self._set_chat_role()
         sleep_time = int(self.sleep_time) if self.sleep_time else 0
         user = self.setuser or self.service.confs[custom_conf_file]["additional_parameters"]['default_user']
