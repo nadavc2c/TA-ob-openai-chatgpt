@@ -50,7 +50,7 @@ Have a bug or a feature request? Please first search for existing and closed iss
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://www.azquotes.com/quote/1596230).
+Please read through our [contributing guidelines](https://www.azquotes.com/quote/1596230).\
 Debug key for OB is OB_TEST_TOKEN_NADAV.
 
 ## Creators
