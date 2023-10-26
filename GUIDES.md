@@ -42,7 +42,7 @@ Please refer to `TA-ob-openai-chatgpt/default/searchbnf.conf` for options and sy
 
 Add your new modes to `bin\modes.json` or to the KV Store `TA_ob_openai_chatgpt_system_modes`.
 
-Guides with screenshots and videos will be released soon.
+Video guide is available.
 
 ## Bugs and feature requests
 
