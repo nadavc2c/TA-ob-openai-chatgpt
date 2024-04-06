@@ -5,7 +5,7 @@ A Splunk add-on for OpenAI integration.
 The `latest release` (104, under Releases on the right) is the add-on builder version, and has the latest bugfixes. Ignore other branches for now.\
 Splunk Cloud users: V104 is now pending for cloud qualification.***
 
-![logo2.png](static/logo2.png)
+![logo2.png](static/logo.png)
 
 Hi! ٩(⊙‿⊙)۶
 
