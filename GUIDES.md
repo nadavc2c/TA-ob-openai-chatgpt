@@ -1,6 +1,6 @@
 <div style="text-align: center;">
   <a href="https://github.com/nadavc2c/TA-ob-openai-chatgpt">
-    <img src="https://raw.githubusercontent.com/nadavc2c/TA-ob-openai-chatgpt/main/static/logo2.png" alt="Logo" width=72 height=72>
+    <img src="https://raw.githubusercontent.com/nadavc2c/TA-ob-openai-chatgpt/main/static/logo.png" alt="Logo" width=72 height=72>
   </a>
   <h3>OB OpenAI</h3>
 Enrich your logs with the power of AI
