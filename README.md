@@ -1,7 +1,7 @@
 # TA-ob-openai-chatgpt
 A Splunk add-on for OpenAI integration.
 
-***Please download the app from Splunkbase.\
+***Please download the app from Splunkbase- https://classic.splunkbase.splunk.com/app/7307/.\
 The `latest release` is the add-on builder version, and has the latest bugfixes. Ignore other branches for now.\
 Splunk Cloud users: This add on is now pending for cloud qualification.***
 
