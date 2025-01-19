@@ -1,0 +1,18 @@
+#!/bin/sh
+
+/opt/splunk/bin/splunk stop
+python3 -m venv my_splunk_env
+. my_splunk_env/bin/activate
+pip install --upgrade requests splunk-sdk openai
+rm -rf /opt/splunk/etc/apps/TA-ob-openai-chatgpt/lib/*
+cp -r my_splunk_env/lib/python3.11/site-packages/* /opt/splunk/etc/apps/TA-ob-openai-chatgpt/lib/
+
+chown -R splunk:splunk /opt/splunk/
+
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type d | xargs chmod 755 $_
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type f | xargs chmod 644 $_
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/bin/ -type f | xargs chmod 655 $_
+chmod 600 /opt/splunk/etc/apps/TA-ob-openai-chatgpt/app.manifest
+chmod 644 /opt/splunk/etc/apps/TA-ob-openai-chatgpt/README.txt
+
+/opt/splunk/bin/splunk start
