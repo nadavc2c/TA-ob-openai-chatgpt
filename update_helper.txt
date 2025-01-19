@@ -10,9 +10,9 @@ cp -r my_splunk_env/lib/python3.11/site-packages/* /opt/splunk/etc/apps/TA-ob-op
 
 chown -R splunk:splunk /opt/splunk/
 
-find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type d | xargs chmod 755 $_
-find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type f | xargs chmod 644 $_
-find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/bin/ -type f | xargs chmod 655 $_
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type d | xargs chmod 755 
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/ -type f | xargs chmod 644 
+find /opt/splunk/etc/apps/TA-ob-openai-chatgpt/bin/ -type f | xargs chmod 655 
 chmod 600 /opt/splunk/etc/apps/TA-ob-openai-chatgpt/app.manifest
 chmod 644 /opt/splunk/etc/apps/TA-ob-openai-chatgpt/README.txt
 
