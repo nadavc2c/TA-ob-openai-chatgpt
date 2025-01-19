@@ -1,4 +1,5 @@
 #!/bin/sh
+#this should help update the pyhton packages and set correct permissions before export
 
 /opt/splunk/bin/splunk stop
 python3 -m venv my_splunk_env
